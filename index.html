@@ -242,13 +242,11 @@
   <h2>Questions & Answers</h2>
   <p><em>Before you step into the echoes, here are some questions you might be wondering. Whether you’re curious, cautious, or simply listening for something just beyond reach, these reflections are here to guide you. Take your time. Wander. Follow what calls to you.</em></p>
 
-  <button onclick="toggleFullQA()" class="qa-toggle">Show All Questions & Answers</button>
-
-  <div id="full-qa-section" style="display: none;">
+  <div class="qna-section">
 
     <div class="qna-group">
-      <button onclick="toggleQA('qa1')" class="qa-toggle">Before You Step Into the Memory</button>
-      <div id="qa1" class="qa-content" style="display: none;">
+      <button class="qna-toggle" onclick="toggleQA('qa1')">Before You Step Into the Memory</button>
+      <div id="qa1" class="qna-content">
         <p><strong>What inspired you to write Ghosts of Deep Time?</strong><br/>I kept seeing traces that didn’t fit. Stories that lingered longer than they should. Shapes that returned in dreams, myths, and geology. It felt like something was whispering just beneath history.</p>
         <p><strong>Why is Ghosts of Deep Time written in a poetic style?</strong><br/>Because this isn’t a story that can be told in facts alone. The language had to feel like memory, not just narrative.</p>
         <p><strong>Why is each chapter centred on a vignette?</strong><br/>Vignettes allow you to enter through feeling. They’re doors, not maps.</p>
@@ -262,8 +260,8 @@
     </div>
 
     <div class="qna-group">
-      <button onclick="toggleQA('qa2')" class="qa-toggle">Shapes Carried by the Wind</button>
-      <div id="qa2" class="qa-content" style="display: none;">
+      <button class="qna-toggle" onclick="toggleQA('qa2')">Shapes Carried by the Wind</button>
+      <div id="qa2" class="qna-content">
         <p><strong>What are Anemoforms?</strong><br/>They’re fragments of presence shaped by absence. Visual echoes of something that was, or might have been. They’re not illustrations — they’re impressions.</p>
         <p><strong>Why did you create the Anemoforms?</strong><br/>Because the book isn’t just about memory — it’s also about form, silence, and the shapes that remain. The Anemoforms hold that silence visually.</p>
         <p><strong>Why are the Anemoforms so abstract?</strong><br/>Because what they depict can’t be shown directly. It’s like trying to photograph a dream.</p>
@@ -274,8 +272,8 @@
     </div>
 
     <div class="qna-group">
-      <button onclick="toggleQA('qa3')" class="qa-toggle">For the Ones Who Ask</button>
-      <div id="qa3" class="qa-content" style="display: none;">
+      <button class="qna-toggle" onclick="toggleQA('qa3')">For the Ones Who Ask</button>
+      <div id="qa3" class="qna-content">
         <p><strong>Is Ghosts of Deep Time just pseudoscience or fantasy?</strong><br/>No. It’s not a theory — it’s an invitation. A feeling. A poetic speculation that respects both science and story without being limited by either.</p>
         <p><strong>Is this book political or tied to any ideology?</strong><br/>No. It doesn’t serve an agenda. It asks you to feel, not to follow.</p>
         <p><strong>Is this New Age or spiritual?</strong><br/>Not really. It’s mythic. It’s sensory. It’s rooted in the soil of imagination, not the sky of belief.</p>
@@ -287,8 +285,8 @@
     </div>
 
     <div class="qna-group">
-      <button onclick="toggleQA('qa4')" class="qa-toggle">The Path Ahead</button>
-      <div id="qa4" class="qa-content" style="display: none;">
+      <button class="qna-toggle" onclick="toggleQA('qa4')">The Path Ahead</button>
+      <div id="qa4" class="qna-content">
         <p><strong>Is Ghosts of Deep Time part of a series?</strong><br/>Yes. It’s the first in a poetic trilogy. The second explores the ghosts of the present. The third, the ghosts of the future.</p>
         <p><strong>What will the next books be about?</strong><br/>Book Two will explore resonance, presence, and how the past echoes through modern landscapes. Book Three will look forward — into warning, forgetting, and what we choose to preserve.</p>
         <p><strong>Will I need to read the next books to understand this one?</strong><br/>No. Each book stands alone — but they’re connected like echoes in a canyon.</p>
@@ -301,8 +299,8 @@
     </div>
 
     <div class="qna-group">
-      <button onclick="toggleQA('qa5')" class="qa-toggle">If You’re Wondering About the Details</button>
-      <div id="qa5" class="qa-content" style="display: none;">
+      <button class="qna-toggle" onclick="toggleQA('qa5')">If You’re Wondering About the Details</button>
+      <div id="qa5" class="qna-content">
         <p><strong>How long would it take the average reader to finish the book?</strong><br/>2–3 hours, depending on how slowly you move through the images and vignettes. It’s a book best read slowly, like walking a path at dusk.</p>
         <p><strong>Is this a good holiday or beach read?</strong><br/>Yes — if your holidays are for dreaming. It’s short, visual, and full of mystery.</p>
         <p><strong>Is this a good book for reading groups or book clubs?</strong><br/>Yes. It opens discussion. Not debate — but reflection. It’s ideal for groups that value questions more than conclusions.</p>
@@ -316,24 +314,41 @@
   </div>
 </section>
 
+<style>
+  .qna-toggle {
+    width: 100%;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid #00ffd5;
+    color: #00ffd5;
+    font-size: 1.1rem;
+    padding: 0.75rem;
+    margin-top: 1rem;
+    text-align: left;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  .qna-toggle:hover {
+    background: rgba(0, 255, 213, 0.15);
+  }
+  .qna-content {
+    display: none;
+    padding: 1rem 1rem 0 1rem;
+    background: rgba(255,255,255,0.05);
+    border-left: 3px solid #00ffd5;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    color: #ccc;
+  }
+</style>
+
 <script>
   function toggleQA(id) {
-    const section = document.getElementById(id);
-    section.style.display = section.style.display === "block" ? "none" : "block";
-  }
-
-  function toggleFullQA() {
-    const fullSection = document.getElementById('full-qa-section');
-    const button = event.target;
-    if (fullSection.style.display === "block") {
-      fullSection.style.display = "none";
-      button.textContent = "Show All Questions & Answers";
-    } else {
-      fullSection.style.display = "block";
-      button.textContent = "Hide Questions & Answers";
-    }
+    const content = document.getElementById(id);
+    content.style.display = content.style.display === "block" ? "none" : "block";
   }
 </script>
+
 
 
 
