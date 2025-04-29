@@ -278,12 +278,11 @@
   <h2>Questions & Answers</h2>
   <p><em>
     Before you step into the echoes, here are some questions you might be wondering.
-    Whether you’re curious, cautious, or simply listening for something just beyond reach,
-    these reflections are here to guide you. Take your time. Wander. Follow what calls to you.
+    Whether you're curious, cautious, or just listening for something beneath the surface — these are for you.
   </em></p>
 
   <div class="qna-box">
-    <button class="toggle-btn" onclick="toggleContent(this)">Show Q&A – Before You Step Into the Memory</button>
+    <button class="toggle-btn" onclick="toggleContent(this, 'About the Book')">Click here for About the Book questions</button>
     <div class="qna-content" style="display: none;">
       <p><strong>What inspired you to write Ghosts of Deep Time?</strong><br/>I kept seeing traces that didn’t fit. Stories that lingered longer than they should. Shapes that returned in dreams, myths, and geology. It felt like something was whispering just beneath history.</p>
       <p><strong>Why is Ghosts of Deep Time written in a poetic style?</strong><br/>Because this isn’t a story that can be told in facts alone. The language had to feel like memory, not just narrative.</p>
@@ -294,7 +293,7 @@
   </div>
 
   <div class="qna-box">
-    <button class="toggle-btn" onclick="toggleContent(this)">Show Q&A – Shapes Carried by the Wind</button>
+    <button class="toggle-btn" onclick="toggleContent(this, 'Themes & Influences')">Click here for Themes & Influences questions</button>
     <div class="qna-content" style="display: none;">
       <p><strong>Are these just metaphors?</strong><br/>Not exactly. Metaphor is a tool, but the aim is to stir something older. Some readers feel a pulse behind the words. That’s not metaphor — that’s recognition.</p>
       <p><strong>Is this inspired by real archaeological finds?</strong><br/>Yes — and by what isn’t found. The silences. The gaps. The bones that don’t quite fit the story we tell.</p>
@@ -303,7 +302,7 @@
   </div>
 
   <div class="qna-box">
-    <button class="toggle-btn" onclick="toggleContent(this)">Show Q&A – For the Ones Who Ask</button>
+    <button class="toggle-btn" onclick="toggleContent(this, 'Who This Is For')">Click here for Who This Is For questions</button>
     <div class="qna-content" style="display: none;">
       <p><strong>What kind of reader is this book for?</strong><br/>If you’ve ever stared at a landscape and felt something stir — this is for you. If you’ve ever felt history was missing something — this is for you. If you’re more interested in wonder than proof — this is for you.</p>
       <p><strong>Is there any evidence for a pre-human civilisation?</strong><br/>There are clues. Anomalies. Things that don’t add up. But this book doesn’t present a theory. It offers a way to feel the question.</p>
@@ -312,16 +311,16 @@
   </div>
 
   <div class="qna-box">
-    <button class="toggle-btn" onclick="toggleContent(this)">Show Q&A – The Path Ahead</button>
+    <button class="toggle-btn" onclick="toggleContent(this, 'What’s Next')">Click here for What’s Next questions</button>
     <div class="qna-content" style="display: none;">
       <p><strong>What’s the next step after reading this?</strong><br/>Pause. Sit. Listen. Let what resonated stay with you. This book isn’t finished when you close it — it begins there.</p>
-      <p><strong>Is there a sequel?</strong><br/>Yes. <em>Where Echo Lives</em> is coming — a follow-up that listens for the ghosts of the present moment and future memory.</p>
+      <p><strong>Is there a sequel?</strong><br/><em>Where Echo Lives</em> is coming — a follow-up that listens for the ghosts of the present moment and future memory.</p>
       <p><strong>Can I support your work?</strong><br/>Yes. Share the book. Leave a review. Or just tell someone who needs to feel it. Every whisper spreads the signal.</p>
     </div>
   </div>
 
   <div class="qna-box">
-    <button class="toggle-btn" onclick="toggleContent(this)">Show Q&A – If You’re Wondering About the Details</button>
+    <button class="toggle-btn" onclick="toggleContent(this, 'Practical Details')">Click here for Practical Details questions</button>
     <div class="qna-content" style="display: none;">
       <p><strong>Who is Pedro Malha?</strong><br/>Just someone listening to the echoes. A writer. A father. A person trying to remember something older than himself.</p>
       <p><strong>How was this book written?</strong><br/>Over years. In fragments. In quiet moments. In the margins of other work. It arrived slowly — like memory returning.</p>
@@ -332,13 +331,13 @@
 </section>
 
 <script>
-function toggleContent(button) {
+function toggleContent(button, label) {
   const content = button.nextElementSibling;
   const isVisible = content.style.display === 'block';
   content.style.display = isVisible ? 'none' : 'block';
   button.textContent = isVisible
-    ? button.textContent.replace('Hide', 'Show')
-    : button.textContent.replace('Show', 'Hide');
+    ? `Click here for ${label} questions`
+    : `Hide ${label} section`;
 }
 </script>
 
