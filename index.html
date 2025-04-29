@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ghosts of Deep Time | Lost Civilisations & Deep Memory by Pedro Malha</title>
+  <title>Ghosts of Deep Time | Lost Civilisations & Deep Memory</title>
   <meta name="description" content="Speculative non-fiction exploring forgotten civilisations, deep time, and poetic memory. Ghosts of Deep Time by Pedro Malha invites you to feel what history forgot." />
   <meta name="keywords" content="Ghosts of Deep Time, speculative non-fiction, ancient civilisation, deep time, myth, memory, archaeology, forgotten history, Pedro Malha book" />
   <meta property="og:title" content="Ghosts of Deep Time – A Poetic Exploration of Myth and Memory" />
@@ -14,44 +14,92 @@
   <link href="favicon.ico" rel="icon" type="image/x-icon" />
   <style>
     html { scroll-behavior: smooth; }
-    body { margin:0; font-family:'Helvetica Neue',sans-serif; background:url('background.png') center/cover fixed; color:#fff; backdrop-filter:brightness(0.85); }
-    .navbar { position:fixed; top:0; width:100%; background:rgba(0,0,0,0.8); z-index:1000;
-              display:flex; align-items:center; justify-content:space-between; padding:0.5rem 1rem; }
+    body {
+      margin:0; font-family:'Helvetica Neue',sans-serif;
+      background:url('background.png') center/cover fixed;
+      color:#fff; backdrop-filter:brightness(0.85);
+    }
+    .navbar {
+      position:fixed; top:0; width:100%;
+      background:rgba(0,0,0,0.8); z-index:1000;
+      display:flex; align-items:center; justify-content:space-between;
+      padding:0.5rem 1rem;
+    }
     .menu-toggle { cursor:pointer; font-size:1.5rem; }
-    .nav-menu { list-style:none; padding:0; margin:0; display:none; flex-direction:column;
-                background:rgba(0,0,0,0.9); width:100%; position:absolute; top:100%; left:0; }
+    .nav-menu {
+      list-style:none; padding:0; margin:0;
+      display:none; flex-direction:column;
+      background:rgba(0,0,0,0.9);
+      width:100%; position:absolute; top:100%; left:0;
+    }
     .nav-menu.show { display:flex; }
     .nav-menu li { border-bottom:1px solid rgba(255,255,255,0.1); }
-    .nav-menu a { display:block; padding:0.75rem 1rem; color:#fff; text-decoration:none; }
+    .nav-menu a {
+      display:block; padding:0.75rem 1rem;
+      color:#fff; text-decoration:none;
+    }
     .nav-menu a:hover { background:rgba(255,255,255,0.1); }
-    #back-to-top { position:fixed; bottom:1rem; right:1rem; background:rgba(0,168,107,0.9);
-                   color:#fff; border:none; border-radius:50%; padding:0.5rem; font-size:1.2rem;
-                   cursor:pointer; display:none; z-index:1002; }
+    #back-to-top {
+      position:fixed; bottom:1rem; right:1rem;
+      background:rgba(0,168,107,0.9); color:#fff;
+      border:none; border-radius:50%; padding:0.5rem;
+      font-size:1.2rem; cursor:pointer; display:none;
+      z-index:1002;
+    }
     main { padding-top:70px; }
     h1 { font-size:2.5rem; text-align:center; margin:1rem 0; }
-    p { font-size:1rem; max-width:700px; margin:0.5rem auto; line-height:1.6; color:#ccc; text-align:center; }
-    section { padding:2rem 1rem; max-width:800px; margin:0 auto; text-align:left; }
+    p {
+      font-size:1rem; max-width:700px; margin:0.5rem auto;
+      line-height:1.6; color:#ccc; text-align:center;
+    }
+    section {
+      padding:2rem 1rem; max-width:800px;
+      margin:0 auto; text-align:left;
+    }
     h2 { font-size:1.8rem; margin-bottom:1rem; color:#00ffd5; }
-    .toggle-options, .qna-buttons { display:flex; flex-wrap:wrap; gap:1rem; justify-content:center;
-                                     margin-bottom:1rem; }
+    .toggle-options, .qna-buttons {
+      display:flex; flex-wrap:wrap; gap:1rem;
+      justify-content:center; margin-bottom:1rem;
+    }
     .toggle-box, .qna-box { flex:1 1 calc(50% - 1rem); }
-    .toggle-button { background:#00a86b; color:#fff; border:none; border-radius:6px;
-                     padding:0.6rem 1rem; cursor:pointer; font-size:1rem; }
+    .toggle-button {
+      background:#00a86b; color:#fff; border:none;
+      border-radius:6px; padding:0.6rem 1rem;
+      cursor:pointer; font-size:1rem;
+    }
     .toggle-content { display:none; margin-top:1rem; }
-    .buy-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:0.5rem; }
-    .buy-grid a { background:rgba(0,255,213,0.08); color:#fff; padding:0.5rem; border:1px solid #00ffd5;
-                  border-radius:6px; text-decoration:none; font-size:0.9rem; text-align:center; }
-    .social-links { display:flex; flex-wrap:wrap; justify-content:center; gap:0.5rem; }
-    .social-links a { background:rgba(255,255,255,0.12); color:#fff; padding:0.4rem 0.8rem;
-                      border-radius:6px; text-decoration:none; font-size:0.9rem;
-                      display:inline-flex; align-items:center; gap:0.3rem; }
+    .buy-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+      gap:0.5rem;
+    }
+    .buy-grid a {
+      background:rgba(0,255,213,0.08); color:#fff;
+      padding:0.5rem; border:1px solid #00ffd5;
+      border-radius:6px; text-decoration:none;
+      font-size:0.9rem; text-align:center;
+    }
+    .social-links {
+      display:flex; flex-wrap:wrap;
+      justify-content:center; gap:0.5rem;
+    }
+    .social-links a {
+      background:rgba(255,255,255,0.12); color:#fff;
+      padding:0.4rem 0.8rem; border-radius:6px;
+      text-decoration:none; font-size:0.9rem;
+      display:inline-flex; align-items:center; gap:0.3rem;
+    }
     .blog-entry { margin-bottom:2rem; }
-    .blog-entry h3 { font-size:1.4rem; color:#00ffd5; margin-bottom:0.5rem; }
+    .blog-entry h3 {
+      font-size:1.4rem; color:#00ffd5; margin-bottom:0.5rem;
+    }
     .blog-entry p { margin-bottom:1rem; }
     @media (min-width:600px) {
       .toggle-box, .qna-box { flex:1 1 calc(33.333% - 1rem); }
-      .nav-menu { display:flex !important; flex-direction:row; position:static;
-                  width:auto; background:transparent; }
+      .nav-menu {
+        display:flex !important; flex-direction:row;
+        position:static; width:auto; background:transparent;
+      }
       .nav-menu li { border:none; }
       main { padding-top:70px; }
       section { max-width:800px; }
@@ -134,8 +182,8 @@
     <!-- Explore -->
     <section id="explore-section">
       <h2>Exploring Lost Civilisations Before History</h2>
-      <p>Ghosts of Deep Time invites you to imagine a lost civilisation — one that may have walked the Earth between 2 million and 500,000 years ago — and asks what traces might still live in our bodies, stories, and dreams.</p>
-      <p>This is not a theory. It’s a meditation. A question. A ghost-story rooted in geology, myth, and evolutionary memory. The kind of story that doesn’t rewrite history — but quietly reframes how we remember it.</p>
+      <p>Ghosts of Deep Time invites you to imagine a lost civilisation—one that may have walked the Earth between 2 million and 500,000 years ago—and asks what traces might still live in our bodies, stories, and dreams.</p>
+      <p>This is not a theory. It’s a meditation. A question. A ghost-story rooted in geology, myth, and evolutionary memory—the kind of story that doesn’t rewrite history, but quietly reframes how we remember it.</p>
     </section>
 
     <!-- Blogs -->
@@ -143,25 +191,21 @@
       <h2>Reflections from Deep Time</h2>
       <div class="blog-entry">
         <h3>Why I Wrote This Book</h3>
-        <p>I didn’t plan to write this book — it arrived like a half-remembered story. <em>Ghosts of Deep Time</em> began with a question that wouldn’t leave me: What if there was a civilisation before everything we’ve ever called civilisation?</p>
+        <p>I didn’t plan to write this book—it arrived like a half-remembered story. <em>Ghosts of Deep Time</em> began with a question that wouldn’t leave me: What if there was a civilisation before everything we’ve ever called civilisation?</p>
         <p>The traces wouldn’t be monuments. They’d be quieter: a curve in a stone, a shape in a story, a dream that keeps returning.</p>
       </div>
-      <div class="blog-entry">
-        <h3>What Is Deep Time — And Why Might It Remember?</h3>
-        <p>Deep time stretches across millions of years, where memory has no page and history has no pen. But maybe, just maybe, something remembers — in the curve of a river, the shape of a tool, the pulse of a myth.</p>
+      <div class="blog-entry"><h3>What Is Deep Time—And Why Might It Remember?</h3>
+        <p>Deep time stretches across millions of years, where memory has no page and history has no pen. But maybe, just maybe, something remembers—in the curve of a river, the shape of a tool, the pulse of a myth.</p>
       </div>
-      <div class="blog-entry">
-        <h3>Was There a Civilisation Before History?</h3>
-        <p>We tell ourselves that history began with writing — with tablets and temples and kings. But what if that’s not where the real story starts? Long before the Sumerians and the pyramids, beings may have whispered stories into stone.</p>
+      <div class="blog-entry"><h3>Was There a Civilisation Before History?</h3>
+        <p>We tell ourselves that history began with writing—with tablets and temples and kings. But what if that’s not where the real story starts? Long before the Sumerians and pyramids, perhaps beings watched the sky and passed down whispers in stone.</p>
       </div>
-      <div class="blog-entry">
-        <h3>Books Like Graham Hancock — But With Poetry Instead of Proof</h3>
+      <div class="blog-entry"><h3>Books Like Graham Hancock—But With Poetry Instead of Proof</h3>
         <p>Some books try to rewrite history. Others just invite you to remember what it forgot.</p>
-        <blockquote>What if there was a civilisation before ours — not built of stone, but of story?</blockquote>
+        <blockquote>What if there was a civilisation before ours—not built of stone, but of story?</blockquote>
       </div>
-      <div class="blog-entry">
-        <h3>The Memory Beneath the Fossil</h3>
-        <p>The fossil is not the whole story. It’s the outline of something deeper — a breath, a moment, a life lived in rhythm with the world. What’s missing from the fossil is where the real mystery lives.</p>
+      <div class="blog-entry"><h3>The Memory Beneath the Fossil</h3>
+        <p>The fossil is not the whole story. It’s the outline of something deeper—a breath, a moment, a life lived in rhythm with the world. What’s missing from the fossil is where the real mystery lives.</p>
       </div>
     </section>
 
@@ -175,33 +219,38 @@
         <div class="qna-box"><button class="toggle-button" data-show="Show What’s Next" data-hide="Hide What’s Next" onclick="toggleSection('qa4', this)">Show What’s Next</button></div>
         <div class="qna-box"><button class="toggle-button" data-show="Show Practical Details" data-hide="Hide Practical Details" onclick="toggleSection('qa5', this)">Show Practical Details</button></div>
       </div>
+
       <div id="qa1" class="toggle-content">
-        <p><strong>What inspired you to write Ghosts of Deep Time?</strong> I kept seeing traces that didn’t fit…</p>
-        <p><strong>Why is it poetic?</strong> Because memory needs feeling…</p>
-        <p><strong>Why are the sections short?</strong> Like flashes, not lectures…</p>
-        <p><strong>Why take it seriously?</strong> Because imagination and science both…</p>
-        <p><strong>How structured?</strong> A spiral you can enter anywhere…</p>
+        <p><strong>What inspired you to write Ghosts of Deep Time?</strong> I kept seeing traces that didn’t fit. Stories that lingered longer than they should.                                                                                                                                                                                                                                                                                                                                                                                                                     </p>
+        <p><strong>Why is it poetic?</strong> Because memory needs feeling more than facts.</p>
+        <p><strong>Why are sections so short?</strong> Like flashes, not lectures—they invite rather than explain.</p>
+        <p><strong>Why take it seriously?</strong> Imagination and science both seek deeper truths.</p>
+        <p><strong>How structured?</strong> A spiral—enter anywhere and feel the shape.</p>
       </div>
+
       <div id="qa2" class="toggle-content">
-        <p><strong>Are these just metaphors?</strong> Not exactly…</p>
-        <p><strong>Is this inspired by real finds?</strong> Yes—and what isn’t found…</p>
-        <p><strong>Imagination vs speculation?</strong> It’s an offering, not a claim…</p>
+        <p><strong>Are these just metaphors?</strong> Not exactly—some readers feel a pulse behind the words.</p>
+        <p><strong>Inspired by real finds?</strong> Yes—and by the silences and gaps in the record.</p>
+        <p><strong>Imagination vs speculation?</strong> This is an offering, not a claim—it blends myth & possibility.</p>
       </div>
+
       <div id="qa3" class="toggle-content">
-        <p><strong>Who is this for?</strong> Anyone who feels history missing…</p>
-        <p><strong>Evidence for pre-human civ?</strong> Clues, anomalies, whispers…</p>
-        <p><strong>Another Atlantis story?</strong> No—this is older, quieter…</p>
+        <p><strong>Who is this for?</strong> Anyone who feels history missing something, who prefers wonder over proof.</p>
+        <p><strong>Evidence for a pre-human civ?</strong> Clues and anomalies—but this book offers the feeling, not the theory.</p>
+        <p><strong>Another Atlantis?</strong> No—this is older, quieter, not bound to tech or temples.</p>
       </div>
+
       <div id="qa4" class="toggle-content">
-        <p><strong>Next step after reading?</strong> Pause. Sit. Listen…</p>
-        <p><strong>Is there a sequel?</strong> <em>Where Echo Lives</em>…</p>
-        <p><strong>Support the work?</strong> Share, review, whisper the story…</p>
+        <p><strong>Next step?</strong> Pause. Sit. Listen. Let it begin when you close the book.</p>
+        <p><strong>Sequel?</strong> <em>Where Echo Lives</em>—listening for ghosts of the present moment.</p>
+        <p><strong>Support?</strong> Share, review, whisper the story to someone who needs it.</p>
       </div>
+
       <div id="qa5" class="toggle-content">
-        <p><strong>Who is Pedro Malha?</strong> A listener, a father, a memory-keeper…</p>
-        <p><strong>How was it written?</strong> In fragments, in quiet moments…</p>
-        <p><strong>Self-published?</strong> Yes—freedom to breathe…</p>
-        <p><strong>Contact?</strong> <a href="mailto:pedro@ghostsofdeeptime.com">pedro@ghostsofdeeptime.com</a></p>
+        <p><strong>Who is Pedro Malha?</strong> A listener, a father, someone trying to remember something older than himself.</p>
+        <p><strong>How was it written?</strong> Over years, in fragments, in quiet moments.</p>
+        <p><strong>Self-published?</strong> Yes—freedom to breathe.</p>
+        <p><strong>Contact?</strong> <a href="mailto:pedro@ghostsofdeeptime.com">pedro@ghostsofdeeptime.com</a>.</p>
       </div>
     </section>
 
@@ -209,8 +258,7 @@
     <section id="video-section">
       <h2>Echoes from the Edge of Time</h2>
       <div style="text-align:center;">
-        <iframe src="https://www.youtube.com/embed/KDJus8K6KzQ"
-                frameborder="0" allowfullscreen
+        <iframe src="https://www.youtube.com/embed/KDJus8K6KzQ" frameborder="0" allowfullscreen
                 style="max-width:100%; width:560px; height:315px;"></iframe>
       </div>
       <p>A fragment carved in fifteen seconds. To follow the unfolding sequence of questions, rituals, and echoes, you can subscribe or follow via the links above.</p>
@@ -244,6 +292,5 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   </script>
-
 </body>
 </html>
