@@ -138,7 +138,7 @@
     </div>
   </div>
 </section>
-
+<!-- SOCIAL LINKS -->
 <div class="social-links">
   <a href="https://www.tiktok.com/@ghostsofdeeptime" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046120.png"/>TikTok</a>
   <a href="https://www.youtube.com/@GhostsOfDeepTime" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png"/>YouTube</a>
@@ -148,30 +148,36 @@
   <a href="mailto:pedro@ghostsofdeeptime.com"><img src="https://cdn-icons-png.flaticon.com/512/542/542638.png"/>Email</a>
 </div>
 
-<section class="section">
+<!-- BLOG SECTION -->
+<section class="section" id="blogs">
   <h2>Blog</h2>
 
+  <!-- Blog 1 -->
   <div class="blog-entry">
     <h3>Why I Wrote This Book</h3>
     <p>I didn’t plan to write this book — it arrived like a half-remembered story. <em>Ghosts of Deep Time</em> began with a question that wouldn’t leave me: What if there was a civilisation before everything we’ve ever called civilisation?</p>
     <p>The traces wouldn’t be monuments. They’d be quieter: a curve in a stone, a shape in a story, a dream that keeps returning.</p>
   </div>
 
+  <!-- Blog 2 -->
   <div class="blog-entry">
     <h3>What Is Deep Time — And Why Might It Remember?</h3>
     <p>Deep time is not just old time. It’s a silence so long it becomes something else.</p>
     <p>It stretches across millions of years, where memory has no page, and history has no pen. But maybe, just maybe, something remembers — in the curve of a river, the shape of a tool, the pulse of a myth.</p>
   </div>
 
+  <!-- Toggle Button + Remaining Blogs -->
   <button class="toggle-button" onclick="toggleContent('moreBlogs')">Show More Blog Entries</button>
   <div id="moreBlogs" class="toggle-content">
 
+    <!-- Blog 3 -->
     <div class="blog-entry">
       <h3>Was There a Civilisation Before History?</h3>
       <p>We tell ourselves that history began with writing — with tablets and temples and kings. But what if that’s not where the real story starts?</p>
       <p>Long before the Sumerians and the pyramids, before we etched meaning into stone, there were beings who stood and watched the sky. Hominids. Humans, almost. Or maybe just human enough to remember.</p>
     </div>
 
+    <!-- Blog 4 -->
     <div class="blog-entry">
       <h3>Books Like Graham Hancock — But With Poetry Instead of Proof</h3>
       <p>Some books try to rewrite history. Others just invite you to remember what it forgot.</p>
@@ -179,6 +185,7 @@
       <blockquote>What if there was a civilisation before ours — not built of stone, but of story?</blockquote>
     </div>
 
+    <!-- Blog 5 -->
     <div class="blog-entry">
       <h3>The Memory Beneath the Fossil</h3>
       <p>The fossil is not the whole story. It’s the outline of something deeper — a breath, a moment, a life lived in rhythm with the world. What’s missing from the fossil is where the real mystery lives.</p>
@@ -186,57 +193,63 @@
 
   </div>
 </section>
-
-<section class="section">
+<!-- Q&A SECTION -->
+<section class="section" id="qna">
   <h2>Q&A</h2>
 
+  <!-- Q&A Group 1 -->
   <button class="toggle-button" onclick="toggleContent('qa1')">Show Q&A – About the Book</button>
   <div id="qa1" class="toggle-content">
     <p><strong>Why did you write this?</strong><br>Because the idea wouldn’t leave me. A whisper I had to follow.</p>
     <p><strong>Is this fiction or fact?</strong><br>Neither. It’s a memory exercise for the species.</p>
   </div>
 
+  <!-- Q&A Group 2 -->
   <button class="toggle-button" onclick="toggleContent('qa2')">Show Q&A – Deep Time</button>
   <div id="qa2" class="toggle-content">
     <p><strong>What is “deep time” to you?</strong><br>Time beyond clocks — something geological, mythic, lived.</p>
     <p><strong>Can memory survive without writing?</strong><br>Yes. In dreams, instincts, rituals — even in bone.</p>
   </div>
 
+  <!-- Q&A Group 3 -->
   <button class="toggle-button" onclick="toggleContent('qa3')">Show Q&A – The Civilisation</button>
   <div id="qa3" class="toggle-content">
     <p><strong>Do you believe a civilisation existed 2 million years ago?</strong><br>I believe something happened. Something shaped us. It left no cities — only echoes.</p>
     <p><strong>What kind of civilisation was it?</strong><br>Not one of machines or power. One of presence. Of resonance. Of memory before words.</p>
   </div>
 
+  <!-- Q&A Group 4 -->
   <button class="toggle-button" onclick="toggleContent('qa4')">Show Q&A – Myth & Meaning</button>
   <div id="qa4" class="toggle-content">
     <p><strong>Are myths just stories?</strong><br>No. They’re mnemonic echoes — patterns remembered in motion.</p>
     <p><strong>So this is all metaphor?</strong><br>It’s metaphor and memory, wrapped together like bone and symbol.</p>
   </div>
 
+  <!-- Q&A Group 5 -->
   <button class="toggle-button" onclick="toggleContent('qa5')">Show Q&A – The Future</button>
   <div id="qa5" class="toggle-content">
     <p><strong>What do you want readers to do with this?</strong><br>Remember. Not fact-check. Feel-check. Ask again.</p>
     <p><strong>Is there a next step?</strong><br>This book is the first echo. You are the second.</p>
   </div>
 </section>
-
-<section class="section">
+<!-- VIDEO SECTION -->
+<section class="section" id="video">
   <h2>Echoes from the Edge of Time</h2>
   <iframe src="https://www.youtube.com/embed/KDJus8K6KzQ" frameborder="0" allowfullscreen></iframe>
   <p style="margin-top: 1rem;">A fragment carved in fifteen seconds. To follow the unfolding sequence of questions, rituals, and echoes, you can subscribe or follow via the links above.</p>
 </section>
 
+<!-- FOOTER -->
 <footer>
   © 2025 Ghosts of Deep Time. All rights reserved.
 </footer>
 
+<!-- SCRIPT FOR TOGGLE -->
 <script>
   function toggleContent(id) {
     var el = document.getElementById(id);
-    el.style.display = el.style.display === 'none' || el.style.display === '' ? 'block' : 'none';
+    if (el) {
+      el.style.display = (el.style.display === 'block') ? 'none' : 'block';
+    }
   }
 </script>
-
-</body>
-</html>
