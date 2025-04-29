@@ -128,6 +128,42 @@
     font-size: 0.9rem;
     color: #ccc;
   }
+.qna-box {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.toggle-btn {
+  background-color: transparent;
+  color: #00ffd5;
+  border: 1px solid #00ffd5;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.toggle-btn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.qna-content p {
+  text-align: left;
+  color: #ccc;
+  line-height: 1.6;
+  max-width: 700px;
+}
+
+
+
+
+
+
 </style>
 </head>
 <body>
@@ -240,128 +276,71 @@
 
 <section class="section">
   <h2>Questions & Answers</h2>
-  <p><em>Before you step into the echoes, here are some questions you might be wondering. Whether you’re curious, cautious, or simply listening for something just beyond reach, these reflections are here to guide you. Take your time. Wander. Follow what calls to you.</em></p>
+  <p><em>
+    Before you step into the echoes, here are some questions you might be wondering.
+    Whether you’re curious, cautious, or simply listening for something just beyond reach,
+    these reflections are here to guide you. Take your time. Wander. Follow what calls to you.
+  </em></p>
 
-  <!-- QA 1 -->
   <div class="qna-box">
-    <h3>Before You Step Into the Memory</h3>
-    <button class="toggle-btn" onclick="toggleContent(this, 'Before You Step Into the Memory')">Show Q&A – Before You Step Into the Memory</button>
+    <button class="toggle-btn" onclick="toggleContent(this)">Show Q&A – Before You Step Into the Memory</button>
     <div class="qna-content" style="display: none;">
       <p><strong>What inspired you to write Ghosts of Deep Time?</strong><br/>I kept seeing traces that didn’t fit. Stories that lingered longer than they should. Shapes that returned in dreams, myths, and geology. It felt like something was whispering just beneath history.</p>
       <p><strong>Why is Ghosts of Deep Time written in a poetic style?</strong><br/>Because this isn’t a story that can be told in facts alone. The language had to feel like memory, not just narrative.</p>
-      <p><strong>Why is each chapter centred on a vignette?</strong><br/>Because vignettes leave space — and memory needs space. They let the reader enter through feeling, not explanation.</p>
-      <p><strong>Why should I buy Ghosts of Deep Time?</strong><br/>Because you’ve felt something ancient that no one talks about. Because you’re not alone.</p>
-      <p><strong>How structured is Ghosts of Deep Time?</strong><br/>Very. Even though it wanders, every part has a rhythm. A pulse. A path.</p>
-      <p><strong>What do you hope readers take away from the book?</strong><br/>That memory is deeper than facts. That silence has weight. That something ancient still speaks.</p>
-      <p><strong>Is this story meant to be taken literally?</strong><br/>Some parts, yes. Others, no. But it’s all emotionally true.</p>
-      <p><strong>Who would enjoy this book the most?</strong><br/>Anyone who feels time strangely. Anyone who’s dreamt of something they’ve never seen. Anyone who listens for echoes.</p>
-      <p><strong>Will Ghosts of Deep Time leave me with something to think about?</strong><br/>Hopefully. But also something to feel.</p>
+      <p><strong>Why is each section so short?</strong><br/>Vignettes are the closest I could get to how these ideas arrived — like flashes, not lectures. They don’t explain. They invite.</p>
+      <p><strong>Why should anyone take this seriously?</strong><br/>Because it’s okay to follow a feeling. Because imagination and science both seek the same thing: a deeper truth hiding just out of reach.</p>
+      <p><strong>How structured is this book?</strong><br/>It’s a spiral. There’s a loose flow from myth to memory to meaning — but you can enter at any point and still feel the shape.</p>
     </div>
   </div>
 
-  <!-- QA 2 -->
   <div class="qna-box">
-    <h3>Shapes Carried by the Wind</h3>
-    <button class="toggle-btn" onclick="toggleContent(this, 'Shapes Carried by the Wind')">Show Q&A – Shapes Carried by the Wind</button>
+    <button class="toggle-btn" onclick="toggleContent(this)">Show Q&A – Shapes Carried by the Wind</button>
     <div class="qna-content" style="display: none;">
-      <p><strong>What are Anemoforms?</strong><br/>They’re fragments of presence shaped by absence. Visual echoes. Memory you can’t quite grasp.</p>
-      <p><strong>Why did you create the Anemoforms?</strong><br/>Because the story isn’t just verbal. It’s visual. Textural. Some feelings need shape, not sentence.</p>
-      <p><strong>Why are the Anemoforms so abstract?</strong><br/>Because they point to something unspeakable. If they were clear, they’d lose their truth.</p>
-      <p><strong>Can the Anemoforms change depending on who looks at them?</strong><br/>Absolutely. That’s the point. They’re mirrors, not messages.</p>
-      <p><strong>What emotions do you hope the Anemoforms evoke?</strong><br/>Longing. Recognition. A strange kind of homecoming.</p>
-      <p><strong>Will the Anemoforms evolve in the next books too?</strong><br/>Yes. The next books will explore presence and resonance — and the forms will shift accordingly.</p>
+      <p><strong>Are these just metaphors?</strong><br/>Not exactly. Metaphor is a tool, but the aim is to stir something older. Some readers feel a pulse behind the words. That’s not metaphor — that’s recognition.</p>
+      <p><strong>Is this inspired by real archaeological finds?</strong><br/>Yes — and by what isn’t found. The silences. The gaps. The bones that don’t quite fit the story we tell.</p>
+      <p><strong>How do you separate imagination from speculation?</strong><br/>I don’t. This book is an offering, not a claim. It blends myth and possibility. It’s about what we’re allowed to feel — not what we’re told to believe.</p>
     </div>
   </div>
 
-  <!-- QA 3 -->
   <div class="qna-box">
-    <h3>For the Ones Who Ask</h3>
-    <button class="toggle-btn" onclick="toggleContent(this, 'For the Ones Who Ask')">Show Q&A – For the Ones Who Ask</button>
+    <button class="toggle-btn" onclick="toggleContent(this)">Show Q&A – For the Ones Who Ask</button>
     <div class="qna-content" style="display: none;">
-      <p><strong>Is Ghosts of Deep Time just pseudoscience or fantasy?</strong><br/>No. It’s not a theory — it’s an invitation. A poetic speculation that respects both science and story.</p>
-      <p><strong>Is this book political or ideological?</strong><br/>No. It doesn’t serve an agenda. It invites curiosity, not compliance.</p>
-      <p><strong>Is this New Age or spiritual?</strong><br/>Not really. It’s mythic. Earthbound. Archetypal. Less about belief, more about resonance.</p>
-      <p><strong>Does this book push conspiracy thinking?</strong><br/>No. It honours mystery without rejecting reason. It’s careful, but open.</p>
-      <p><strong>Does this book ask for belief?</strong><br/>Only in wonder. And even then — softly.</p>
-      <p><strong>Is there any science behind it?</strong><br/>Yes, but it’s not the focus. The gaps are where the poetry starts.</p>
+      <p><strong>What kind of reader is this book for?</strong><br/>If you’ve ever stared at a landscape and felt something stir — this is for you. If you’ve ever felt history was missing something — this is for you. If you’re more interested in wonder than proof — this is for you.</p>
+      <p><strong>Is there any evidence for a pre-human civilisation?</strong><br/>There are clues. Anomalies. Things that don’t add up. But this book doesn’t present a theory. It offers a way to feel the question.</p>
+      <p><strong>Isn’t this just another Atlantis story?</strong><br/>No. Atlantis is a myth of a lost city. This is a feeling of a lost presence — something older, quieter, and not bound to tech or temples.</p>
     </div>
   </div>
 
-  <!-- QA 4 -->
   <div class="qna-box">
-    <h3>The Path Ahead</h3>
-    <button class="toggle-btn" onclick="toggleContent(this, 'The Path Ahead')">Show Q&A – The Path Ahead</button>
+    <button class="toggle-btn" onclick="toggleContent(this)">Show Q&A – The Path Ahead</button>
     <div class="qna-content" style="display: none;">
-      <p><strong>Is this part of a series?</strong><br/>Yes. It’s the first of three: past, present, future.</p>
-      <p><strong>What are the next books about?</strong><br/>Book Two explores ghosts of the present. Book Three peers ahead — into memory, warning, loss.</p>
-      <p><strong>Can I read them out of order?</strong><br/>Yes. But together, they echo deeper.</p>
-      <p><strong>Will they stay poetic?</strong><br/>Yes. But the voice will evolve. Memory always does.</p>
-      <p><strong>Should I wait for all three?</strong><br/>No. This one is the beginning — and it’s whole in itself.</p>
+      <p><strong>What’s the next step after reading this?</strong><br/>Pause. Sit. Listen. Let what resonated stay with you. This book isn’t finished when you close it — it begins there.</p>
+      <p><strong>Is there a sequel?</strong><br/>Yes. <em>Where Echo Lives</em> is coming — a follow-up that listens for the ghosts of the present moment and future memory.</p>
+      <p><strong>Can I support your work?</strong><br/>Yes. Share the book. Leave a review. Or just tell someone who needs to feel it. Every whisper spreads the signal.</p>
     </div>
   </div>
 
-  <!-- QA 5 -->
   <div class="qna-box">
-    <h3>If You’re Wondering About the Details</h3>
-    <button class="toggle-btn" onclick="toggleContent(this, 'If You’re Wondering About the Details')">Show Q&A – If You’re Wondering About the Details</button>
+    <button class="toggle-btn" onclick="toggleContent(this)">Show Q&A – If You’re Wondering About the Details</button>
     <div class="qna-content" style="display: none;">
-      <p><strong>How long is the book?</strong><br/>Short enough to finish in an afternoon — long enough to stay with you for months.</p>
-      <p><strong>Holiday or book club material?</strong><br/>Yes. It’s a reflective read — perfect for pause, discussion, and dreamers.</p>
-      <p><strong>Is it appropriate for teens?</strong><br/>Yes — especially thoughtful, intuitive ones.</p>
-      <p><strong>Is it heavy reading?</strong><br/>No. But it’s deep. Don’t rush it.</p>
-      <p><strong>Where can I buy it?</strong><br/>Visit <a href="https://ghostsofdeeptime.com" target="_blank">ghostsofdeeptime.com</a> for global links.</p>
+      <p><strong>Who is Pedro Malha?</strong><br/>Just someone listening to the echoes. A writer. A father. A person trying to remember something older than himself.</p>
+      <p><strong>How was this book written?</strong><br/>Over years. In fragments. In quiet moments. In the margins of other work. It arrived slowly — like memory returning.</p>
+      <p><strong>Is this self-published?</strong><br/>Yes. And proudly so. This book wasn’t meant to fit in a box. It needed freedom to breathe.</p>
+      <p><strong>Can I reach out to the author?</strong><br/>Yes. Email me at <a href="mailto:pedro@ghostsofdeeptime.com">pedro@ghostsofdeeptime.com</a>. I read everything. Replies might be slow, but they’re real.</p>
     </div>
   </div>
 </section>
 
-<!-- STYLE (unchanged) -->
-<style>
-.qna-box {
-  margin-bottom: 2.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.qna-box h3 {
-  font-size: 1.4rem;
-  color: #00ffd5;
-  margin-bottom: 0.4rem;
-}
-.qna-content {
-  display: none;
-  color: #ccc;
-  margin-top: 1rem;
-}
-.qna-content p {
-  margin-bottom: 1.2rem;
-  line-height: 1.6;
-}
-.toggle-btn {
-  background-color: transparent;
-  border: 1px solid #00ffd5;
-  color: #00ffd5;
-  padding: 0.4rem 1rem;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background 0.3s;
-  margin-top: 0.2rem;
-}
-.toggle-btn:hover {
-  background-color: rgba(0, 255, 213, 0.08);
-}
-</style>
-
-<!-- SCRIPT (adjusted for dynamic button label) -->
 <script>
-function toggleContent(button, sectionName) {
+function toggleContent(button) {
   const content = button.nextElementSibling;
-  const isVisible = content.style.display === "block";
-  content.style.display = isVisible ? "none" : "block";
-  button.textContent = isVisible ? `Show Q&A – ${sectionName}` : `Hide Q&A – ${sectionName}`;
+  const isVisible = content.style.display === 'block';
+  content.style.display = isVisible ? 'none' : 'block';
+  button.textContent = isVisible
+    ? button.textContent.replace('Hide', 'Show')
+    : button.textContent.replace('Show', 'Hide');
 }
 </script>
-
 
 <section class="section">
 <h2>Echoes from the Edge of Time</h2>
