@@ -245,6 +245,7 @@
   <!-- QA 1 -->
   <div class="qna-box">
     <h3>Before You Step Into the Memory</h3>
+    <button class="toggle-btn" onclick="toggleContent(this)">Show More</button>
     <div class="qna-content" style="display: none;">
       <p><strong>What inspired you to write Ghosts of Deep Time?</strong><br/>I kept seeing traces that didn’t fit. Stories that lingered longer than they should. Shapes that returned in dreams, myths, and geology. It felt like something was whispering just beneath history.</p>
       <p><strong>Why is Ghosts of Deep Time written in a poetic style?</strong><br/>Because this isn’t a story that can be told in facts alone. The language had to feel like memory, not just narrative.</p>
@@ -256,12 +257,12 @@
       <p><strong>Who would enjoy this book the most?</strong><br/>Anyone who feels time strangely. Anyone who’s dreamt of something they’ve never seen. Anyone who listens for echoes.</p>
       <p><strong>Will Ghosts of Deep Time leave me with something to think about?</strong><br/>Hopefully. But also something to feel.</p>
     </div>
-    <button class="toggle-btn" onclick="toggleContent(this)">Show More</button>
   </div>
 
   <!-- QA 2 -->
   <div class="qna-box">
     <h3>Shapes Carried by the Wind</h3>
+    <button class="toggle-btn" onclick="toggleContent(this)">Show More</button>
     <div class="qna-content" style="display: none;">
       <p><strong>What are Anemoforms?</strong><br/>They’re fragments of presence shaped by absence. Visual echoes. Memory you can’t quite grasp.</p>
       <p><strong>Why did you create the Anemoforms?</strong><br/>Because the story isn’t just verbal. It’s visual. Textural. Some feelings need shape, not sentence.</p>
@@ -270,12 +271,12 @@
       <p><strong>What emotions do you hope the Anemoforms evoke?</strong><br/>Longing. Recognition. A strange kind of homecoming.</p>
       <p><strong>Will the Anemoforms evolve in the next books too?</strong><br/>Yes. The next books will explore presence and resonance — and the forms will shift accordingly.</p>
     </div>
-    <button class="toggle-btn" onclick="toggleContent(this)">Show More</button>
   </div>
 
   <!-- QA 3 -->
   <div class="qna-box">
     <h3>For the Ones Who Ask</h3>
+    <button class="toggle-btn" onclick="toggleContent(this)">Show More</button>
     <div class="qna-content" style="display: none;">
       <p><strong>Is Ghosts of Deep Time just pseudoscience or fantasy?</strong><br/>No. It’s not a theory — it’s an invitation. A poetic speculation that respects both science and story.</p>
       <p><strong>Is this book political or ideological?</strong><br/>No. It doesn’t serve an agenda. It invites curiosity, not compliance.</p>
@@ -284,12 +285,12 @@
       <p><strong>Does this book ask for belief?</strong><br/>Only in wonder. And even then — softly.</p>
       <p><strong>Is there any science behind it?</strong><br/>Yes, but it’s not the focus. The gaps are where the poetry starts.</p>
     </div>
-    <button class="toggle-btn" onclick="toggleContent(this)">Show More</button>
   </div>
 
   <!-- QA 4 -->
   <div class="qna-box">
     <h3>The Path Ahead</h3>
+    <button class="toggle-btn" onclick="toggleContent(this)">Show More</button>
     <div class="qna-content" style="display: none;">
       <p><strong>Is this part of a series?</strong><br/>Yes. It’s the first of three: past, present, future.</p>
       <p><strong>What are the next books about?</strong><br/>Book Two explores ghosts of the present. Book Three peers ahead — into memory, warning, loss.</p>
@@ -297,12 +298,12 @@
       <p><strong>Will they stay poetic?</strong><br/>Yes. But the voice will evolve. Memory always does.</p>
       <p><strong>Should I wait for all three?</strong><br/>No. This one is the beginning — and it’s whole in itself.</p>
     </div>
-    <button class="toggle-btn" onclick="toggleContent(this)">Show More</button>
   </div>
 
   <!-- QA 5 -->
   <div class="qna-box">
     <h3>If You’re Wondering About the Details</h3>
+    <button class="toggle-btn" onclick="toggleContent(this)">Show More</button>
     <div class="qna-content" style="display: none;">
       <p><strong>How long is the book?</strong><br/>Short enough to finish in an afternoon — long enough to stay with you for months.</p>
       <p><strong>Holiday or book club material?</strong><br/>Yes. It’s a reflective read — perfect for pause, discussion, and dreamers.</p>
@@ -310,25 +311,28 @@
       <p><strong>Is it heavy reading?</strong><br/>No. But it’s deep. Don’t rush it.</p>
       <p><strong>Where can I buy it?</strong><br/>Visit <a href="https://ghostsofdeeptime.com" target="_blank">ghostsofdeeptime.com</a> for global links.</p>
     </div>
-    <button class="toggle-btn" onclick="toggleContent(this)">Show More</button>
   </div>
 </section>
 
+<!-- STYLES -->
 <style>
 .qna-box {
   margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .qna-box h3 {
   font-size: 1.4rem;
   color: #00ffd5;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.4rem;
 }
 
 .qna-content {
   display: none;
   color: #ccc;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .qna-content p {
@@ -345,6 +349,7 @@
   cursor: pointer;
   font-size: 1rem;
   transition: background 0.3s;
+  margin-top: 0.2rem;
 }
 
 .toggle-btn:hover {
@@ -352,9 +357,10 @@
 }
 </style>
 
+<!-- SCRIPT -->
 <script>
 function toggleContent(button) {
-  const content = button.previousElementSibling;
+  const content = button.nextElementSibling;
   const isVisible = content.style.display === "block";
   content.style.display = isVisible ? "none" : "block";
   button.textContent = isVisible ? "Show More" : "Show Less";
