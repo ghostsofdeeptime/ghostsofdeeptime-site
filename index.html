@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ghosts of Deep Time | Pedro Malha</title>
-  <meta name="description" content="A poetic and speculative non-fiction book exploring forgotten civilisations, deep memory, and myth."/>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta name="description" content="A poetic and speculative non-fiction book exploring forgotten civilisations, deep memory, and myth.">
+  <link href="favicon.ico" rel="icon" type="image/x-icon">
   <style>
     body {
       margin: 0;
@@ -14,7 +14,7 @@
       color: #fff;
       padding: 2rem;
       text-align: center;
-      backdrop-filter: brightness(0.8);
+      backdrop-filter: brightness(0.85);
     }
     h1 { font-size: 2.8rem; margin-bottom: 1rem; }
     h2 {
@@ -23,9 +23,9 @@
       color: #00ffd5;
     }
     h3 {
-      font-size: 1.4rem;
-      color: #00ffd5;
+      font-size: 1.3rem;
       margin-top: 2rem;
+      color: #fff;
     }
     p {
       font-size: 1.1rem;
@@ -41,50 +41,37 @@
     }
     .buy-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 0.6rem;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0.75rem;
       margin-top: 1rem;
     }
     .buy-grid a {
       background: rgba(0,255,213,0.08);
       color: white;
       border: 1px solid #00ffd5;
-      padding: 0.6rem;
+      padding: 0.6rem 1rem;
       border-radius: 6px;
       text-decoration: none;
       transition: 0.3s;
-      display: block;
+      text-align: center;
     }
     .buy-grid a:hover { background: rgba(0,255,213,0.18); }
-    .toggle-button {
-      background: #00a86b;
-      color: white;
-      padding: 0.5rem 1rem;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      margin-top: 1rem;
-    }
-    .toggle-button:hover {
-      background: #007f50;
-    }
-    .toggle-content { display: none; margin-top: 1rem; }
     .social-links {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 0.7rem;
-      margin: 2rem 0;
+      gap: 1rem;
+      margin-top: 2rem;
     }
     .social-links a {
       background: rgba(255,255,255,0.12);
-      padding: 0.5rem 0.9rem;
+      padding: 0.6rem 1rem;
       border-radius: 8px;
       color: #fff;
-      display: flex;
+      display: inline-flex;
       align-items: center;
       text-decoration: none;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
     }
     .social-links img {
       width: 22px;
@@ -92,12 +79,31 @@
       margin-right: 0.4rem;
       filter: drop-shadow(0 0 2px rgba(255,255,255,0.4));
     }
+    .toggle-button {
+      background: #00a86b;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      margin: 1rem 0;
+    }
+    .toggle-button:hover {
+      background: #007f50;
+    }
+    .toggle-content { display: none; margin-top: 1rem; }
     blockquote {
       border-left: 3px solid rgba(255,255,255,0.3);
-      padding-left: 1rem;
+      padding-left: 1.2rem;
       color: #fff;
       font-style: italic;
       margin: 1.5rem 0;
+    }
+    iframe {
+      display: block;
+      margin: 0 auto;
+      max-width: 560px;
+      width: 100%;
     }
     footer {
       text-align: center;
@@ -112,98 +118,113 @@
 <h1>Ghosts of Deep Time</h1>
 <p>A poetic and speculative non-fiction book exploring forgotten civilisations, deep memory, and the silence beneath history.</p>
 
-<!-- BUY SECTION -->
 <section class="section">
   <h2>Buy Ghosts of Deep Time</h2>
   <button class="toggle-button" onclick="toggleContent('buy')">Show Buy Options</button>
   <div id="buy" class="toggle-content">
     <div class="buy-grid">
-      <a href="https://www.amazon.co.uk/stores/Pedro-Malha/author/B0F4PKFF4W">Buy – UK</a>
-      <a href="https://www.amazon.com/stores/Pedro-Malha/author/B0F4PKFF4W">Buy – USA</a>
-      <a href="https://www.amazon.com.au/stores/Pedro-Malha/author/B0F4PKFF4W">Buy – Australia</a>
-      <a href="https://www.amazon.de/stores/Pedro-Malha/author/B0F4PKFF4W">Buy – Germany</a>
-      <a href="https://www.amazon.fr/stores/Pedro-Malha/author/B0F4PKFF4W">Buy – France</a>
-      <a href="https://www.amazon.in/stores/Pedro-Malha/author/B0F4PKFF4W">Buy – India</a>
-      <a href="https://www.amazon.co.jp/stores/Pedro-Malha/author/B0F4PKFF4W">Buy – Japan</a>
-      <a href="https://www.amazon.es/stores/Pedro-Malha/author/B0F4PKFF4W">Buy – Spain & Portugal</a>
-      <a href="https://www.amazon.it/stores/Pedro-Malha/author/B0F4PKFF4W">Buy – Italy</a>
-      <a href="https://www.amazon.com.br/stores/Pedro-Malha/author/B0F4PKFF4W">Buy – Brazil</a>
-      <a href="https://www.amazon.ca/stores/Pedro-Malha/author/B0F4PKFF4W">Buy – Canada</a>
-      <a href="https://www.amazon.com.mx/stores/Pedro-Malha/author/B0F4PKFF4W">Buy – Mexico</a>
+      <a href="https://www.amazon.co.uk/stores/Pedro-Malha/author/B0F4PKFF4W" target="_blank">Buy – UK</a>
+      <a href="https://www.amazon.com/stores/Pedro-Malha/author/B0F4PKFF4W" target="_blank">Buy – USA</a>
+      <a href="https://www.amazon.com.au/stores/Pedro-Malha/author/B0F4PKFF4W" target="_blank">Buy – Australia</a>
+      <a href="https://www.amazon.de/stores/Pedro-Malha/author/B0F4PKFF4W" target="_blank">Buy – Germany</a>
+      <a href="https://www.amazon.fr/stores/Pedro-Malha/author/B0F4PKFF4W" target="_blank">Buy – France</a>
+      <a href="https://www.amazon.in/stores/Pedro-Malha/author/B0F4PKFF4W" target="_blank">Buy – India</a>
+      <a href="https://www.amazon.co.jp/stores/Pedro-Malha/author/B0F4PKFF4W" target="_blank">Buy – Japan</a>
+      <a href="https://www.amazon.es/stores/Pedro-Malha/author/B0F4PKFF4W" target="_blank">Buy – Spain & Portugal</a>
+      <a href="https://www.amazon.it/stores/Pedro-Malha/author/B0F4PKFF4W" target="_blank">Buy – Italy</a>
+      <a href="https://www.amazon.com.br/stores/Pedro-Malha/author/B0F4PKFF4W" target="_blank">Buy – Brazil</a>
+      <a href="https://www.amazon.ca/stores/Pedro-Malha/author/B0F4PKFF4W" target="_blank">Buy – Canada</a>
+      <a href="https://www.amazon.com.mx/stores/Pedro-Malha/author/B0F4PKFF4W" target="_blank">Buy – Mexico</a>
     </div>
   </div>
 </section>
 
-<!-- SOCIAL LINKS -->
 <div class="social-links">
-  <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733609.png">Goodreads</a>
-  <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046120.png">TikTok</a>
-  <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png">YouTube</a>
-  <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968830.png">X (Twitter)</a>
-  <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png">Instagram</a>
-  <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Threads_%28app%29_logo.svg/512px-Threads_%28app%29_logo.svg.png">Threads</a>
-  <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111543.png">Medium</a>
-  <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384015.png">Quora</a>
-  <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111493.png">Pinterest</a>
-  <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">Facebook</a>
-  <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111589.png">Reddit</a>
-  <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733635.png">Tumblr</a>
-  <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/542/542638.png">Email</a>
+  <a href="https://www.tiktok.com/@ghostsofdeeptime" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046120.png"/>TikTok</a>
+  <a href="https://www.youtube.com/@GhostsOfDeepTime" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png"/>YouTube</a>
+  <a href="https://x.com/GhostsDeepTime" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968830.png"/>X (Twitter)</a>
+  <a href="https://www.instagram.com/ghostsofdeeptime/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png"/>Instagram</a>
+  <a href="https://www.threads.net/@ghostsofdeeptime" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Threads_%28app%29_logo.svg/512px-Threads_%28app%29_logo.svg.png"/>Threads</a>
+  <a href="mailto:pedro@ghostsofdeeptime.com"><img src="https://cdn-icons-png.flaticon.com/512/542/542638.png"/>Email</a>
 </div>
 
-<!-- BLOG SECTION -->
 <section class="section">
   <h2>Blog</h2>
+
   <div class="blog-entry">
     <h3>Why I Wrote This Book</h3>
-    <p>I didn’t plan to write this book — it arrived like a half-remembered story...</p>
+    <p>I didn’t plan to write this book — it arrived like a half-remembered story. <em>Ghosts of Deep Time</em> began with a question that wouldn’t leave me: What if there was a civilisation before everything we’ve ever called civilisation?</p>
+    <p>The traces wouldn’t be monuments. They’d be quieter: a curve in a stone, a shape in a story, a dream that keeps returning.</p>
   </div>
+
   <div class="blog-entry">
     <h3>What Is Deep Time — And Why Might It Remember?</h3>
-    <p>Deep time is not just old time. It’s a silence so long it becomes something else...</p>
+    <p>Deep time is not just old time. It’s a silence so long it becomes something else.</p>
+    <p>It stretches across millions of years, where memory has no page, and history has no pen. But maybe, just maybe, something remembers — in the curve of a river, the shape of a tool, the pulse of a myth.</p>
   </div>
+
   <button class="toggle-button" onclick="toggleContent('moreBlogs')">Show More Blog Entries</button>
   <div id="moreBlogs" class="toggle-content">
-    <div class="blog-entry"><h3>Was There a Civilisation Before History?</h3><p>...</p></div>
-    <div class="blog-entry"><h3>Books Like Graham Hancock — But With Poetry</h3><p>...</p></div>
-    <div class="blog-entry"><h3>The Memory Beneath the Fossil</h3><p>...</p></div>
+
+    <div class="blog-entry">
+      <h3>Was There a Civilisation Before History?</h3>
+      <p>We tell ourselves that history began with writing — with tablets and temples and kings. But what if that’s not where the real story starts?</p>
+      <p>Long before the Sumerians and the pyramids, before we etched meaning into stone, there were beings who stood and watched the sky. Hominids. Humans, almost. Or maybe just human enough to remember.</p>
+    </div>
+
+    <div class="blog-entry">
+      <h3>Books Like Graham Hancock — But With Poetry Instead of Proof</h3>
+      <p>Some books try to rewrite history. Others just invite you to remember what it forgot.</p>
+      <p>If you’ve read Graham Hancock or watched <em>Ancient Apocalypse</em>, you’ve probably felt it — that pull toward a deeper story. A missing chapter beneath the ruins. A whisper that says: <em>Something happened here.</em></p>
+      <blockquote>What if there was a civilisation before ours — not built of stone, but of story?</blockquote>
+    </div>
+
+    <div class="blog-entry">
+      <h3>The Memory Beneath the Fossil</h3>
+      <p>The fossil is not the whole story. It’s the outline of something deeper — a breath, a moment, a life lived in rhythm with the world. What’s missing from the fossil is where the real mystery lives.</p>
+    </div>
+
   </div>
 </section>
 
-<!-- Q&A SECTION -->
 <section class="section">
-  <h2>Questions & Answers</h2>
+  <h2>Q&A</h2>
 
   <button class="toggle-button" onclick="toggleContent('qa1')">Show Q&A – About the Book</button>
   <div id="qa1" class="toggle-content">
-    <p><strong>Why did you write this?</strong> Because the idea wouldn’t leave me...</p>
+    <p><strong>Why did you write this?</strong><br>Because the idea wouldn’t leave me. A whisper I had to follow.</p>
+    <p><strong>Is this fiction or fact?</strong><br>Neither. It’s a memory exercise for the species.</p>
   </div>
 
   <button class="toggle-button" onclick="toggleContent('qa2')">Show Q&A – Deep Time</button>
   <div id="qa2" class="toggle-content">
-    <p><strong>What is deep time?</strong> Time beyond clocks, mythic and geological.</p>
+    <p><strong>What is “deep time” to you?</strong><br>Time beyond clocks — something geological, mythic, lived.</p>
+    <p><strong>Can memory survive without writing?</strong><br>Yes. In dreams, instincts, rituals — even in bone.</p>
   </div>
 
-  <button class="toggle-button" onclick="toggleContent('qa3')">Show Q&A – Civilisation</button>
+  <button class="toggle-button" onclick="toggleContent('qa3')">Show Q&A – The Civilisation</button>
   <div id="qa3" class="toggle-content">
-    <p><strong>Do you believe a civilisation existed?</strong> Something shaped us. No cities, just echoes.</p>
+    <p><strong>Do you believe a civilisation existed 2 million years ago?</strong><br>I believe something happened. Something shaped us. It left no cities — only echoes.</p>
+    <p><strong>What kind of civilisation was it?</strong><br>Not one of machines or power. One of presence. Of resonance. Of memory before words.</p>
   </div>
 
-  <button class="toggle-button" onclick="toggleContent('qa4')">Show Q&A – Inspiration & Style</button>
+  <button class="toggle-button" onclick="toggleContent('qa4')">Show Q&A – Myth & Meaning</button>
   <div id="qa4" class="toggle-content">
-    <p><strong>Why poetic?</strong> Because facts don’t hold memory the way story can.</p>
+    <p><strong>Are myths just stories?</strong><br>No. They’re mnemonic echoes — patterns remembered in motion.</p>
+    <p><strong>So this is all metaphor?</strong><br>It’s metaphor and memory, wrapped together like bone and symbol.</p>
   </div>
 
-  <button class="toggle-button" onclick="toggleContent('qa5')">Show Q&A – What Next?</button>
+  <button class="toggle-button" onclick="toggleContent('qa5')">Show Q&A – The Future</button>
   <div id="qa5" class="toggle-content">
-    <p><strong>What happens after this book?</strong> Echoes. Experiments. Questions. The journey continues.</p>
+    <p><strong>What do you want readers to do with this?</strong><br>Remember. Not fact-check. Feel-check. Ask again.</p>
+    <p><strong>Is there a next step?</strong><br>This book is the first echo. You are the second.</p>
   </div>
 </section>
 
-<!-- VIDEO -->
 <section class="section">
   <h2>Echoes from the Edge of Time</h2>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/KDJus8K6KzQ" allowfullscreen></iframe>
+  <iframe src="https://www.youtube.com/embed/KDJus8K6KzQ" frameborder="0" allowfullscreen></iframe>
+  <p style="margin-top: 1rem;">A fragment carved in fifteen seconds. To follow the unfolding sequence of questions, rituals, and echoes, you can subscribe or follow via the links above.</p>
 </section>
 
 <footer>
@@ -212,12 +233,10 @@
 
 <script>
   function toggleContent(id) {
-    const content = document.getElementById(id);
-    if (!content) return;
-    content.style.display = (content.style.display === 'block') ? 'none' : 'block';
+    var el = document.getElementById(id);
+    el.style.display = el.style.display === 'none' || el.style.display === '' ? 'block' : 'none';
   }
 </script>
 
 </body>
 </html>
-
