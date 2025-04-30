@@ -1,3 +1,2 @@
 User-agent: *
-Allow: /
-Sitemap: https://ghostsofdeeptime.com/sitemap.xml
+Disallow: /cgi-bin
