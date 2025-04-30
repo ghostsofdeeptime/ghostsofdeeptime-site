@@ -55,11 +55,12 @@
     "index.html": {
       "settings": {
         "main": true,
-        "title": "Home",
-        "meta_descr": "",
+        "title": "Ghosts of Deep Time | Lost Civilisations & Deep Memory",
+        "meta_descr": "Speculative non-fiction exploring forgotten civilisations, deep time, and poetic memory. Ghosts of Deep Time invites you to feel what history forgot.",
         "header_custom": "",
         "footer_custom": "",
-        "html_before": ""
+        "html_before": "",
+        "meta_image": "@PROJECT_PATH@/assets/images/og-preview.jpg"
       },
       "components": [
         {
