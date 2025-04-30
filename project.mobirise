@@ -1,0 +1,567 @@
+{
+  "settings": {
+    "name": "Site 2025-04-30 12:49",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "startm5",
+      "title": "StartM5",
+      "titlePreset": "StartM5",
+      "styling": {
+        "primaryColor": "#9fe870",
+        "secondaryColor": "#ffd7ef",
+        "successColor": "#2e481a",
+        "infoColor": "#320707",
+        "warningColor": "#a0e2e1",
+        "dangerColor": "#ffea64",
+        "mainFont": "Inter Tight",
+        "display1Font": "Inter Tight",
+        "display1Size": 5,
+        "display2Font": "Inter Tight",
+        "display2Size": 4,
+        "display5Font": "Inter Tight",
+        "display5Size": 2,
+        "display7Font": "Inter Tight",
+        "display7Size": 1.4,
+        "display4Font": "Inter Tight",
+        "display4Size": 1.4,
+        "isRoundedImages": true,
+        "isRoundedButtons": true,
+        "isLargeButtons": false,
+        "isGhostButtonBorder": true,
+        "underlinedLinks": false,
+        "isAnimatedOnScroll": false,
+        "isScrollToTopButton": false
+      },
+      "additionalSetColors": []
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "6.0.1",
+    "siteFonts": [],
+    "favicon": false,
+    "mbrsiteDomain": "j3yx0q53ny",
+    "imageResize": false,
+    "usedWebp": false,
+    "robotsSwitcher": false,
+    "sitemapSwitcher": false,
+    "sitemapSwitcherAuto": false,
+    "siteUrl": false,
+    "cookiesAlert": false,
+    "gdpr": false,
+    "publishEditFolder": false,
+    "uniqCompNum": 23,
+    "versionPublish": "6.0.1"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Home",
+        "meta_descr": "",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "display": "flex",
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)",
+              ".mbr-overlay": {
+                "background-color": "@overlayColor",
+                "opacity": "@overlayOpacity"
+              }
+            },
+            ".content-wrap": {
+              "padding": "5rem 1rem",
+              "@media (min-width: 992px)": {
+                "padding": "5rem 3rem"
+              }
+            },
+            "@media (min-width: 768px)": {
+              "align-items": "~\"@{verticalAlign}\"",
+              ".row": {
+                "justify-content": "~\"@{horizontalAlign}\""
+              }
+            },
+            "@media (max-width: 991px) and (min-width: 768px)": {
+              ".content-wrap": {
+                "min-width": "50%"
+              }
+            },
+            "@media (max-width: 767px)": {
+              "-webkit-align-items": "center",
+              "align-items": "center",
+              ".mbr-row": {
+                "-webkit-justify-content": "center",
+                "justify-content": "center"
+              },
+              ".content-wrap": {
+                "width": "100%"
+              }
+            },
+            ".mbr-section-title": {
+              "text-align": "center",
+              "color": "#ffffff"
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "text-align": "center",
+              "color": "#ffffff"
+            },
+            ".mbr-description": {
+              "text-align": "center",
+              "color": "#ffffff"
+            }
+          },
+          "_name": "header19",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"header19\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" group=\"Headers\" mbr-class=\"{'mbr-fullscreen': fullScreen, 'mbr-parallax-background': bg.parallax}\">\n  <mbr-parameters>\n    <header>Size</header>\n    <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\" checked>\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"12\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"12\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n    <input type=\"range\" inline name=\"contentWidth\" title=\"Content Width\" min=\"4\" max=\"12\" step=\"1\" value=\"12\">\n    <header>Show / Hide</header>\n    <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n    <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n    <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\" checked>\n    <input type=\"checkbox\" title=\"Description\" name=\"showDescription\" checked>\n    <select title=\"Vertical Align\" name=\"verticalAlign\" condition=\"fullScreen\">\n      <option value=\"flex-start\">Top</option>\n      <option value=\"center\" selected>Center</option>\n      <option value=\"flex-end\">Bottom</option>\n    </select>\n    <select title=\"Horizontal Align\" name=\"horizontalAlign\">\n      <option value=\"flex-start\">Left</option>\n      <option value=\"center\" selected>Center</option>\n      <option value=\"flex-end\">Right</option>\n    </select>\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" parallax>\n      <input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/background.png\">\n      <input type=\"color\" title=\"Color\" value=\"#2e481a\" selected>\n      <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n    </fieldset>\n    <header condition=\"bg.type === 'video'\">Fallback Image</header>\n    <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#1f6463\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n  </mbr-parameters>\n\n  <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n  <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n  <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n    <div class=\"row\">\n      <div class=\"content-wrap col-12 col-md-{{contentWidth}}\">\n        <h1 class=\"mbr-section-title mbr-fonts-style mb-4\" mbr-theme-style=\"display-2\" data-app-selector=\".mbr-section-title\" mbr-if=\"showTitle\"><b>Ghosts Of Deep Time</b></h1>\n        <p class=\"mbr-fonts-style mbr-text mb-4\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n          A poetic and speculative non-fiction book exploring forgotten civilisations, deep memory, and the silence beneath history.\n        </p>\n        <div class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-7\"><a class=\"btn btn-primary\" href=\"index.html#header19-l\" data-app-placeholder=\"Type Text\">Buy Book</a>  <a class=\"btn btn-primary\" href=\"index.html#tabs1-7\" data-app-placeholder=\"Type Text\">Blogs</a> <a class=\"btn btn-primary\" href=\"index.html#tabs1-h\" data-app-placeholder=\"Type Text\">Questions</a> <a class=\"btn btn-primary\" href=\"index.html#social06-d\" data-app-placeholder=\"Type Text\">Social Media</a></div>\n        <p class=\"mbr-fonts-style mbr-description mt-4\" mbr-theme-style=\"display-7\" mbr-if=\"showDescription\" data-app-selector=\".mbr-description\"><b>What if the first civilisation didn’t leave monuments — it left memory?<br></b><br><i>Ghosts of Deep Time</i> is a poetic and provocative journey into the forgotten space between 2 and 0.5 million years ago — long before written history, long before Atlantis, and possibly long before us.\n<br>\n<br>Blending archaeology, mythology, genetics, and human intuition, this book explores the idea that an intelligent race of hominins may have once walked the Earth. A people who lived in harmony with the land, passed stories through silence, and chose to disappear without a trace.\n<br>\n<br>No bones. No ruins. Only:\n<br>Unexplained tools\n<br>Ancient DNA with no known match\n<br>Burial rituals before burial was invented\n<br>Stories of giants, sky-beings, and teachers repeated across cultures\n<br>This is not a theory of aliens or lost technology.\n<br>It’s something quieter — a call to re-examine myth, silence, and our own inheritance.\n<br>If we were not the first... what else have we forgotten?\n<br>\n<br><i>Not a history book. A memory you didn’t know you were carrying.</i><br></p>\n      </div>\n    </div>\n  </div>\n</section>",
+          "_cid": "uJReltWUnE",
+          "_anchor": "header19-e",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "background-color": "@bgColor",
+            ".mbr-text": {
+              "color": "#000000"
+            },
+            ".mbr-section-subtitle": {
+              "color": "#000000"
+            },
+            ".mbr-section-title": {
+              "color": "#000000"
+            },
+            ".img-wrapper img": {
+              "width": "120px",
+              "height": "120px",
+              "object-fit": "cover",
+              "border-radius": "50% !important",
+              "@media (min-width: 768px) and (max-width: 991px)": {
+                "width": "120px",
+                "height": "120px"
+              },
+              "@media (max-width: 768px)": {
+                "width": "80px",
+                "height": "80px"
+              }
+            },
+            ".img-wrapper": {
+              "display": "flex"
+            },
+            ".card-text": {
+              "text-align": "center"
+            },
+            ".card-title, .img-wrapper": {
+              "text-align": "center"
+            }
+          },
+          "_name": "people07",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"people07\" group=\"People\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n        <input type=\"range\" name=\"textWidth\" title=\"Width\" min=\"4\" max=\"12\" value=\"12\" step=\"1\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Image\" name=\"showImage\" checked>\n        <select title=\"Image Align\" name=\"contentAlign\">\n          <option value=\"justify-content-start\">Left</option>\n          <option value=\"justify-content-center\" selected>Center</option>\n          <option value=\"justify-content-end\">Right</option>\n        </select>\n        <input type=\"checkbox\" title=\"Name\" name=\"showTitle\" checked>\n        <header>Background</header>\n        <input type=\"color\" title=\"Color\" name=\"bgColor\" value=\"#ffffff\">\n    </mbr-parameters>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-md-12 col-lg-{{textWidth}}\">\n                <p class=\"card-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".card-text\"><b>\n                    Ghosts of Deep Time delves into the mysteries of human prehistory, exploring areas where evidence remains elusive. It sparks fascinating possibilities and theories that challenge conventional thinking and encourage. A must-read for anyone intrigued by the untold chapters of our ancient past.\n                </b></p>\n                <div class=\"img-wrapper mt-4 {{contentAlign}}\" mbr-if=\"showImage\">\n                    <img src=\"@PROJECT_PATH@/assets/images/mbr-1.png\" alt data-slide-to=\"0\" data-bs-slide-to=\"0\">\n                </div>\n                <p class=\"card-title mbr-fonts-style mt-3\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .img-wrapper\"><b>Dan on Amazon (First Reviewer Kudos)<br>Thank you!</b></p>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "uJQS8W33i2",
+          "_anchor": "people07-8",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "display": "flex",
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)",
+              ".mbr-overlay": {
+                "background-color": "@overlayColor",
+                "opacity": "@overlayOpacity"
+              }
+            },
+            ".content-wrap": {
+              "padding": "5rem 1rem",
+              "@media (min-width: 992px)": {
+                "padding": "5rem 3rem"
+              }
+            },
+            "@media (min-width: 768px)": {
+              "align-items": "~\"@{verticalAlign}\"",
+              ".row": {
+                "justify-content": "~\"@{horizontalAlign}\""
+              }
+            },
+            "@media (max-width: 991px) and (min-width: 768px)": {
+              ".content-wrap": {
+                "min-width": "50%"
+              }
+            },
+            "@media (max-width: 767px)": {
+              "-webkit-align-items": "center",
+              "align-items": "center",
+              ".mbr-row": {
+                "-webkit-justify-content": "center",
+                "justify-content": "center"
+              },
+              ".content-wrap": {
+                "width": "100%"
+              }
+            },
+            ".mbr-section-title": {
+              "text-align": "center",
+              "color": "#ffffff"
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "text-align": "center",
+              "color": "#ffffff"
+            },
+            ".mbr-description": {
+              "text-align": "center",
+              "color": "#ffffff"
+            }
+          },
+          "_name": "header19",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"header19\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" group=\"Headers\" mbr-class=\"{'mbr-fullscreen': fullScreen, 'mbr-parallax-background': bg.parallax}\">\n  <mbr-parameters>\n    <header>Size</header>\n    <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"12\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"12\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n    <input type=\"range\" inline name=\"contentWidth\" title=\"Content Width\" min=\"4\" max=\"12\" step=\"1\" value=\"12\">\n    <header>Show / Hide</header>\n    <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n    <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n    <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\" checked>\n    <input type=\"checkbox\" title=\"Description\" name=\"showDescription\" checked>\n    <select title=\"Vertical Align\" name=\"verticalAlign\" condition=\"fullScreen\">\n      <option value=\"flex-start\">Top</option>\n      <option value=\"center\" selected>Center</option>\n      <option value=\"flex-end\">Bottom</option>\n    </select>\n    <select title=\"Horizontal Align\" name=\"horizontalAlign\">\n      <option value=\"flex-start\">Left</option>\n      <option value=\"center\" selected>Center</option>\n      <option value=\"flex-end\">Right</option>\n    </select>\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" parallax>\n      <input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/background.png\">\n      <input type=\"color\" title=\"Color\" value=\"#2e481a\" selected>\n      <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n    </fieldset>\n    <header condition=\"bg.type === 'video'\">Fallback Image</header>\n    <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#1f6463\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n  </mbr-parameters>\n\n  <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n  <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n  <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n    <div class=\"row\">\n      <div class=\"content-wrap col-12 col-md-{{contentWidth}}\">\n        <h1 class=\"mbr-section-title mbr-fonts-style mb-4\" mbr-theme-style=\"display-2\" data-app-selector=\".mbr-section-title\" mbr-if=\"showTitle\"><b>Buy Book On Amazon</b></h1>\n        <p class=\"mbr-fonts-style mbr-text mb-4\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n          Available on Kindle Buy Now, Kindle Unlimited and Paperback</p>\n        <div class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-7\"><a class=\"btn btn-primary\" href=\"index.html#tabs1-7\" data-app-placeholder=\"Type Text\">UK Store</a>  <a class=\"btn btn-primary\" href=\"index.html#social06-d\" data-app-placeholder=\"Type Text\">USA Store</a> <a class=\"btn btn-primary\" href=\"index.html#tabs1-h\" data-app-placeholder=\"Type Text\">Australia Store</a> <a class=\"btn btn-primary\" href=\"index.html#tabs1-7\" data-app-placeholder=\"Type Text\">Germany Store</a> <a class=\"btn btn-primary\" href=\"index.html#tabs1-7\" data-app-placeholder=\"Type Text\">France Store</a> <a class=\"btn btn-primary\" href=\"index.html#tabs1-7\" data-app-placeholder=\"Type Text\">India Store</a> <a class=\"btn btn-primary\" href=\"index.html#tabs1-7\" data-app-placeholder=\"Type Text\">Japan Store</a> <a class=\"btn btn-primary\" href=\"index.html#tabs1-7\" data-app-placeholder=\"Type Text\">Spain Store</a> <a class=\"btn btn-primary\" href=\"index.html#tabs1-7\" data-app-placeholder=\"Type Text\">Italy Store</a> <a class=\"btn btn-primary\" href=\"index.html#tabs1-7\" data-app-placeholder=\"Type Text\">Brazil Store</a> <a class=\"btn btn-primary\" href=\"index.html#tabs1-7\" data-app-placeholder=\"Type Text\">Canada Store</a> <a class=\"btn btn-primary\" href=\"index.html#tabs1-7\" data-app-placeholder=\"Type Text\">Mexico Store</a></div>\n        <p class=\"mbr-fonts-style mbr-description mt-4\" mbr-theme-style=\"display-7\" mbr-if=\"showDescription\" data-app-selector=\".mbr-description\"><b>Exploring Lost Civilisations Before History</b><br><b>\n</b><br>Ghosts of Deep Time invites you to imagine a lost civilisation — one that may have walked the Earth between 2 million and 500,000 years ago — and asks what traces might still live in our bodies, stories, and dreams.<br><br>This is not a theory. It’s a meditation. A question. A ghost-story rooted in geology, myth, and evolutionary memory. The kind of story that doesn’t rewrite history — but quietly reframes how we remember it.<br></p>\n      </div>\n    </div>\n  </div>\n</section>",
+          "_anchor": "header19-l",
+          "_cid": "uJRCMt2JQ5",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            ".nav-tabs .nav-item.open .nav-link:focus, .nav-tabs .nav-link.active:focus": {
+              "outline": "none"
+            },
+            ".nav-tabs": {
+              "flex-wrap": "wrap",
+              "border-bottom": "none"
+            },
+            ".nav-item": {
+              "@media (max-width: 767px)": {
+                "width": "100%",
+                "margin-right": "0 !important",
+                "text-align": "center"
+              }
+            },
+            ".nav-tabs .nav-item": {
+              "margin-right": "1.5rem"
+            },
+            ".nav-tabs .nav-link": {
+              "transition": "padding 0.3s ease, background-color 0.3s ease",
+              "border": "none",
+              "&:not(.active)": {
+                "color": "@activeColor"
+              },
+              "border-radius": "2rem !important",
+              "padding": "1.25rem 0!important",
+              "background-color": "transparent!important",
+              "overflow": "hidden!important"
+            },
+            ".nav-tabs .nav-link.active": {
+              "color": "@tabsColor !important",
+              "background-color": "@activeColor !important",
+              "padding": "1.25rem 2rem!important"
+            },
+            ".mbr-section-title": {
+              "text-align": "center",
+              "color": "#2e481a"
+            },
+            ".mbr-section-subtitle": {
+              "text-align": "center",
+              "color": "#ffffff"
+            },
+            ".mbr-text": {
+              "color": "#fff",
+              "margin": "0"
+            },
+            ".content-head": {
+              "max-width": "800px"
+            },
+            ".item-wrapper": {
+              "background-color": "@backgroundColor",
+              "padding": "2.25rem",
+              "@media (max-width: 767px)": {
+                "padding": "2rem 1.5rem"
+              }
+            }
+          },
+          "_name": "tabs1",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"tabs content18\" group=\"Content\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background':bg.parallax}\" plugins=\"mbr-tabs\">\n\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" name=\"fullWidth\" title=\"Full Width\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"3\">\n        <input type=\"range\" name=\"textWidth\" title=\"Width\" min=\"4\" max=\"12\" value=\"12\" step=\"1\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\">\n        <header>Tabs</header>\n        <select title=\"Count\" name=\"bootstrapTabs\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n            <option value=\"4\" selected>4</option>\n            <option value=\"5\">5</option>\n            <option value=\"6\">6</option>\n        </select>\n        <input type=\"color\" name=\"tabsColor\" title=\"Color\" value=\"#2e481a\">\n        <input type=\"color\" name=\"backgroundColor\" title=\"Background Color\" value=\"#2e481a\">\n        <input type=\"color\" name=\"activeColor\" title=\"Active Color\" value=\"#9fe870\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/background.png\">\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay&&bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay&&bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay&&bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center mb-5\" mbr-if=\"showTitle || showSubtitle\">\n            <div class=\"col-12 content-head\">\n                <h3 class=\"mbr-section-title mb-0 mbr-fonts-style\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\">\n                    <b>Ghosts Blogs</b></h3>\n                <h4 class=\"mbr-section-subtitle mb-0 mt-4 mbr-fonts-style\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-7\" mbr-if=\"showSubtitle\">Tabs Subtitle</h4>\n            </div>\n        </div>\n        <div class=\"row justify-content-center\">\n            <div class=\"col-12 col-md-{{textWidth}}\">\n                <div class=\"item-wrapper\">\n                    <ul class=\"nav nav-tabs mb-4\" role=\"tablist\">\n                        <li mbr-buttons mbr-theme-style=\"display-7\" class=\"nav-item first mbr-fonts-style\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove,-mbrLink,-mbrBtnRemove,-iconFont\"><a class=\"nav-link mbr-fonts-style show active\" role=\"tab\" data-toggle=\"tab\" data-bs-toggle=\"tab\" href=\"#tabs1-7_tab0\" data-app-placeholder=\"Type Text\" aria-selected=\"true\">Why I Wrote Ghosts Of Deep Time</a></li>\n                        <li mbr-buttons mbr-theme-style=\"display-7\" class=\"nav-item\" mbr-if=\"bootstrapTabs > 1\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove,-mbrLink,-mbrBtnRemove,-iconFont\"><a class=\"nav-link mbr-fonts-style active\" role=\"tab\" data-toggle=\"tab\" data-bs-toggle=\"tab\" href=\"#tabs1-7_tab1\" data-app-placeholder=\"Type Text\" aria-selected=\"true\">Was There a Civilisation Before History?</a></li>\n                        <li mbr-buttons mbr-theme-style=\"display-7\" class=\"nav-item\" mbr-if=\"bootstrapTabs > 2\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove,-mbrLink,-mbrBtnRemove,-iconFont\"><a class=\"nav-link mbr-fonts-style active\" role=\"tab\" data-toggle=\"tab\" data-bs-toggle=\"tab\" href=\"#tabs1-7_tab2\" data-app-placeholder=\"Type Text\" aria-selected=\"true\">What Is Deep Time — And Why Might It Remember?</a></li>\n                        <li mbr-buttons mbr-theme-style=\"display-7\" class=\"nav-item\" mbr-if=\"bootstrapTabs > 3\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove,-mbrLink,-mbrBtnRemove,-iconFont\"><a class=\"nav-link mbr-fonts-style active\" role=\"tab\" data-toggle=\"tab\" data-bs-toggle=\"tab\" href=\"#tabs1-7_tab3\" data-app-placeholder=\"Type Text\" aria-selected=\"true\">Books Like Graham Hancock — But With Poetry Instead of Proof</a></li>\n                        <li mbr-buttons mbr-theme-style=\"display-7\" class=\"nav-item\" mbr-if=\"bootstrapTabs > 4\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove,-mbrLink,-mbrBtnRemove,-iconFont\">\n                            <a class=\"nav-link mbr-fonts-style\" role=\"tab\" data-toggle=\"tab\" data-bs-toggle=\"tab\" href=\"#tab5\" data-app-placeholder=\"Type Text\" aria-selected=\"true\">\n                                <b>Design</b>\n                            </a>\n                        </li>\n                        <li mbr-buttons mbr-theme-style=\"display-7\" class=\"nav-item\" mbr-if=\"bootstrapTabs > 5\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove,-mbrLink,-mbrBtnRemove,-iconFont\">\n                            <a class=\"nav-link mbr-fonts-style\" role=\"tab\" data-toggle=\"tab\" data-bs-toggle=\"tab\" href=\"#tab6\" data-app-placeholder=\"Type Text\" aria-selected=\"true\">\n                                <b>Architecture</b>\n                            </a>\n                        </li>\n                    </ul>\n                    <div class=\"tab-content\">\n                        <div id=\"tab1\" class=\"tab-pane in active\" role=\"tabpanel\">\n                            <div class=\"row\">\n                                <div class=\"col-md-12\">\n                                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">I didn’t plan to write this book — it arrived like a half-remembered story. Ghosts of Deep Time began with a question that wouldn’t leave me: What if there was a civilisation before everything we’ve ever called civilisation?\n<br>\n<br>I wasn’t looking to rewrite history. But I was drawn to the idea that something might have happened — between 2 million and 500,000 years ago — something we’ve forgotten not because it didn’t happen, but because we no longer know how to remember it.\n<br>\n<br>The traces wouldn’t be monuments. They’d be quieter: a curve in a stone, a shape in a story, a dream that keeps returning.\n<br>\n<br>I wrote this book to follow those traces — not to a theory, but to a feeling. Something older than facts. Something still alive beneath us. Maybe you’ve felt it too.</p>\n                                </div>\n                            </div>\n                        </div>\n                        <div id=\"tab2\" class=\"tab-pane\" role=\"tabpanel\" mbr-if=\"bootstrapTabs > 1\">\n                            <div class=\"row\">\n                                <div class=\"col-md-12\">\n                                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">We tell ourselves that history began with writing — with tablets and temples and kings. But what if that’s not where the real story starts?\n<br>\n<br>Long before the Sumerians and the pyramids, before we etched meaning into stone, there were beings who stood and watched the sky. Hominids. Humans, almost. Or maybe just human enough to remember.\n<br>\n<br>The bones remain — but what about their memory? What did they believe, pass down, bury, whisper into stone?\n<br>\n<br>Modern archaeology gives us fragments. But myth gives us echoes. Dreams give us clues. Across the world, stories of a time before time linger — of a flood, of giants, of a world lost not to war, but to forgetting.\n<br>\n<br>Could there have been a civilisation before history? Not a high-tech Atlantis — but something older, stranger. A culture of silence. A civilisation of meaning, not machines.\n<br>\n<br>Ghosts of Deep Time doesn’t try to prove this. It invites you to imagine it. To remember what you never knew. To feel the weight of the unrecorded.</p>\n                                </div>\n                            </div>\n                        </div>\n                        <div id=\"tab3\" class=\"tab-pane\" role=\"tabpanel\" mbr-if=\"bootstrapTabs > 2\">\n                            <div class=\"row\">\n                                <div class=\"col-md-12\">\n                                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">Deep time is not just old time. It’s a silence so long it becomes something else.\n<br>\n<br>It stretches across millions of years, where memory has no page, and history has no pen. But maybe, just maybe, something remembers.\n<br>\n<br>Not in words. Not in facts. But in the curve of a river. The shape of a tool. The pulse of a myth.\n<br>\n<br>Deep time might hold the memory of hands that shaped without leaving mark. Voices that spoke only in ritual. Cultures that vanished not by catastrophe — but by becoming the earth again.\n<br>\n<br>Evolution teaches us survival. But stories — even unspoken ones — may survive too. We inherit them in feelings, in intuitions, in the way some dreams feel older than bone.\n<br>\n<br>Ghosts of Deep Time is not about finding proof. It’s about following feeling. Listening backward. And maybe… remembering something the world has buried for us.</p>\n                                </div>\n                            </div>\n                        </div>\n                        <div id=\"tab4\" class=\"tab-pane\" role=\"tabpanel\" mbr-if=\"bootstrapTabs > 3\">\n                            <div class=\"row\">\n                                <div class=\"col-md-12\">\n                                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">Some books try to rewrite history. Others just invite you to remember what it forgot.\n<br>\n<br>If you’ve read Graham Hancock or watched Ancient Apocalypse, you’ve probably felt it — that pull toward a deeper story. A missing chapter beneath the ruins. A whisper that says: Something happened here.\n<br>\n<br>But Ghosts of Deep Time isn’t here to argue. It doesn’t fight over timelines. It doesn’t need evidence.\n<br>\n<br>It asks a different kind of question:&nbsp;What if there was a civilisation before ours — not built of stone, but of story?<br>\n<br>This is a book for those who feel echoes in the landscape. For those who’ve wondered about the space between fossils and myth. For those who don’t need proof to feel something is missing.\n<br>\n<br>If you’re looking for books like Graham Hancock, but with poetry instead of proof — this might be the one you didn’t know you needed.</p>\n                                </div>\n                            </div>\n                        </div>\n                        <div id=\"tab5\" class=\"tab-pane\" role=\"tabpanel\" mbr-if=\"bootstrapTabs > 4\">\n                            <div class=\"row\">\n                                <div class=\"col-md-12\">\n                                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                                        Free Website Builder offers a huge collection of 2500+ website blocks, templates and\n                                        themes with thousands flexible options. Combine blocks from different themes to\n                                        create a unique mix.\n                                    </p>\n                                </div>\n                            </div>\n                        </div>\n                        <div id=\"tab6\" class=\"tab-pane\" role=\"tabpanel\" mbr-if=\"bootstrapTabs > 5\">\n                            <div class=\"row\">\n                                <div class=\"col-md-12\">\n                                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                                        Free Website Builder offers a huge collection of 2500+ website blocks, templates and\n                                        themes with thousands flexible options. Combine blocks from different themes to\n                                        create a unique mix.</p>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "uJQS2unnSl",
+          "_anchor": "tabs1-7",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            ".nav-tabs .nav-item.open .nav-link:focus, .nav-tabs .nav-link.active:focus": {
+              "outline": "none"
+            },
+            ".nav-tabs": {
+              "flex-wrap": "wrap",
+              "border-bottom": "none"
+            },
+            ".nav-item": {
+              "@media (max-width: 767px)": {
+                "width": "100%",
+                "margin-right": "0 !important",
+                "text-align": "center"
+              }
+            },
+            ".nav-tabs .nav-item": {
+              "margin-right": "1.5rem"
+            },
+            ".nav-tabs .nav-link": {
+              "transition": "padding 0.3s ease, background-color 0.3s ease",
+              "border": "none",
+              "&:not(.active)": {
+                "color": "@activeColor"
+              },
+              "border-radius": "2rem !important",
+              "padding": "1.25rem 0!important",
+              "background-color": "transparent!important",
+              "overflow": "hidden!important"
+            },
+            ".nav-tabs .nav-link.active": {
+              "color": "@tabsColor !important",
+              "background-color": "@activeColor !important",
+              "padding": "1.25rem 2rem!important"
+            },
+            ".mbr-section-title": {
+              "text-align": "center",
+              "color": "#ffffff"
+            },
+            ".mbr-section-subtitle": {
+              "text-align": "center",
+              "color": "#ffffff"
+            },
+            ".mbr-text": {
+              "color": "#fff",
+              "margin": "0"
+            },
+            ".content-head": {
+              "max-width": "800px"
+            },
+            ".item-wrapper": {
+              "background-color": "@backgroundColor",
+              "padding": "2.25rem",
+              "@media (max-width: 767px)": {
+                "padding": "2rem 1.5rem"
+              }
+            }
+          },
+          "_name": "tabs1",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"tabs content18\" group=\"Content\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background':bg.parallax}\" plugins=\"mbr-tabs\">\n\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" name=\"fullWidth\" title=\"Full Width\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n        <input type=\"range\" name=\"textWidth\" title=\"Width\" min=\"4\" max=\"12\" value=\"12\" step=\"1\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\">\n        <header>Tabs</header>\n        <select title=\"Count\" name=\"bootstrapTabs\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n            <option value=\"4\">4</option>\n            <option value=\"5\" selected>5</option>\n            <option value=\"6\">6</option>\n        </select>\n        <input type=\"color\" name=\"tabsColor\" title=\"Color\" value=\"#2e481a\">\n        <input type=\"color\" name=\"backgroundColor\" title=\"Background Color\" value=\"#2e481a\">\n        <input type=\"color\" name=\"activeColor\" title=\"Active Color\" value=\"#9fe870\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#2e481a\" selected>\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay&&bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay&&bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay&&bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center mb-5\" mbr-if=\"showTitle || showSubtitle\">\n            <div class=\"col-12 content-head\">\n                <h3 class=\"mbr-section-title mb-0 mbr-fonts-style\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\"><b>Ghosts Q&amp;A</b></h3>\n                <h4 class=\"mbr-section-subtitle mb-0 mt-4 mbr-fonts-style\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-7\" mbr-if=\"showSubtitle\">Tabs Subtitle</h4>\n            </div>\n        </div>\n        <div class=\"row justify-content-center\">\n            <div class=\"col-12 col-md-{{textWidth}}\">\n                <div class=\"item-wrapper\">\n                    <ul class=\"nav nav-tabs mb-4\" role=\"tablist\">\n                        <li mbr-buttons mbr-theme-style=\"display-7\" class=\"nav-item first mbr-fonts-style\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove,-mbrLink,-mbrBtnRemove,-iconFont\"><a class=\"nav-link mbr-fonts-style show active\" role=\"tab\" data-toggle=\"tab\" data-bs-toggle=\"tab\" href=\"#tabs1-h_tab0\" data-app-placeholder=\"Type Text\" aria-selected=\"true\">About The Book</a></li>\n                        <li mbr-buttons mbr-theme-style=\"display-7\" class=\"nav-item\" mbr-if=\"bootstrapTabs > 1\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove,-mbrLink,-mbrBtnRemove,-iconFont\"><a class=\"nav-link mbr-fonts-style active\" role=\"tab\" data-toggle=\"tab\" data-bs-toggle=\"tab\" href=\"#tabs1-h_tab1\" data-app-placeholder=\"Type Text\" aria-selected=\"true\">Themes &amp; Influences</a></li>\n                        <li mbr-buttons mbr-theme-style=\"display-7\" class=\"nav-item\" mbr-if=\"bootstrapTabs > 2\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove,-mbrLink,-mbrBtnRemove,-iconFont\"><a class=\"nav-link mbr-fonts-style active\" role=\"tab\" data-toggle=\"tab\" data-bs-toggle=\"tab\" href=\"#tabs1-h_tab2\" data-app-placeholder=\"Type Text\" aria-selected=\"true\">Who This Is For</a></li>\n                        <li mbr-buttons mbr-theme-style=\"display-7\" class=\"nav-item\" mbr-if=\"bootstrapTabs > 3\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove,-mbrLink,-mbrBtnRemove,-iconFont\"><a class=\"nav-link mbr-fonts-style active\" role=\"tab\" data-toggle=\"tab\" data-bs-toggle=\"tab\" href=\"#tabs1-h_tab3\" data-app-placeholder=\"Type Text\" aria-selected=\"true\">What's Next</a></li>\n                        <li mbr-buttons mbr-theme-style=\"display-7\" class=\"nav-item\" mbr-if=\"bootstrapTabs > 4\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove,-mbrLink,-mbrBtnRemove,-iconFont\"><a class=\"nav-link mbr-fonts-style active\" role=\"tab\" data-toggle=\"tab\" data-bs-toggle=\"tab\" href=\"#tabs1-h_tab4\" data-app-placeholder=\"Type Text\" aria-selected=\"true\">Practical Details</a></li>\n                        <li mbr-buttons mbr-theme-style=\"display-7\" class=\"nav-item\" mbr-if=\"bootstrapTabs > 5\" data-toolbar=\"-mbrBtnAdd,-mbrBtnMove,-mbrLink,-mbrBtnRemove,-iconFont\">\n                            <a class=\"nav-link mbr-fonts-style\" role=\"tab\" data-toggle=\"tab\" data-bs-toggle=\"tab\" href=\"#tab6\" data-app-placeholder=\"Type Text\" aria-selected=\"true\">\n                                <b>Architecture</b>\n                            </a>\n                        </li>\n                    </ul>\n                    <div class=\"tab-content\">\n                        <div id=\"tab1\" class=\"tab-pane in active\" role=\"tabpanel\">\n                            <div class=\"row\">\n                                <div class=\"col-md-12\">\n                                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">What inspired you to write Ghosts of Deep Time?\n<br>I kept seeing traces that didn’t fit. Stories that lingered longer than they should. Shapes that returned in dreams, myths, and geology. It felt like something was whispering just beneath history.\n<br>\n<br>Why is Ghosts of Deep Time written in a poetic style?\n<br>Because this isn’t a story that can be told in facts alone. The language had to feel like memory, not just narrative.\n<br>\n<br>Why is each section so short?\n<br>Vignettes are the closest I could get to how these ideas arrived — like flashes, not lectures. They don’t explain. They invite.\n<br>\n<br>Why should anyone take this seriously?\n<br>Because it’s okay to follow a feeling. Because imagination and science both seek the same thing: a deeper truth hiding just out of reach.\n<br>\n<br>How structured is this book?\n<br>It’s a spiral. There’s a loose flow from myth to memory to meaning — but you can enter at any point and still feel the shape.</p>\n                                </div>\n                            </div>\n                        </div>\n                        <div id=\"tab2\" class=\"tab-pane\" role=\"tabpanel\" mbr-if=\"bootstrapTabs > 1\">\n                            <div class=\"row\">\n                                <div class=\"col-md-12\">\n                                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">Are these just metaphors?\n<br>Not exactly. Metaphor is a tool, but the aim is to stir something older. Some readers feel a pulse behind the words. That’s not metaphor — that’s recognition.\n<br>\n<br>Is this inspired by real archaeological finds?\n<br>Yes — and by what isn’t found. The silences. The gaps. The bones that don’t quite fit the story we tell.\n<br>\n<br>How do you separate imagination from speculation?\n<br>I don’t. This book is an offering, not a claim. It blends myth and possibility. It’s about what we’re allowed to feel — not what we’re told to believe.</p>\n                                </div>\n                            </div>\n                        </div>\n                        <div id=\"tab3\" class=\"tab-pane\" role=\"tabpanel\" mbr-if=\"bootstrapTabs > 2\">\n                            <div class=\"row\">\n                                <div class=\"col-md-12\">\n                                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">What kind of reader is this book for?\n<br>If you’ve ever stared at a landscape and felt something stir — this is for you. If you’ve ever felt history was missing something — this is for you. If you’re more interested in wonder than proof — this is for you.\n<br>\n<br>Is there any evidence for a pre-human civilisation?\n<br>There are clues. Anomalies. Things that don’t add up. But this book doesn’t present a theory. It offers a way to feel the question.\n<br>\n<br>Isn’t this just another Atlantis story?\n<br>No. Atlantis is a myth of a lost city. This is a feeling of a lost presence — something older, quieter, and not bound to tech or temples.</p>\n                                </div>\n                            </div>\n                        </div>\n                        <div id=\"tab4\" class=\"tab-pane\" role=\"tabpanel\" mbr-if=\"bootstrapTabs > 3\">\n                            <div class=\"row\">\n                                <div class=\"col-md-12\">\n                                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">What’s the next step after reading this?\n<br>Pause. Sit. Listen. Let what resonated stay with you. This book isn’t finished when you close it — it begins there.\n<br>\n<br>Is there a sequel?\n<br>Where Echo Lives is coming — a follow-up that listens for the ghosts of the present moment and future memory.\n<br>\n<br>Can I support your work?\n<br>Yes. Share the book. Leave a review. Or just tell someone who needs to feel it. Every whisper spreads the signal.</p>\n                                </div>\n                            </div>\n                        </div>\n                        <div id=\"tab5\" class=\"tab-pane\" role=\"tabpanel\" mbr-if=\"bootstrapTabs > 4\">\n                            <div class=\"row\">\n                                <div class=\"col-md-12\">\n                                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">Who is Pedro Malha?\n<br>Just someone listening to the echoes. A writer. A father. A person trying to remember something older than himself.\n<br>\n<br>How was this book written?\n<br>Over years. In fragments. In quiet moments. In the margins of other work. It arrived slowly — like memory returning.\n<br>\n<br>Is this self-published?\n<br>Yes. And proudly so. This book wasn’t meant to fit in a box. It needed freedom to breathe.\n<br>\n<br>Can I reach out to the author?\n<br>Yes. Email me at <a href=\"mailto:pedro@ghostsofdeeptime.com\" class=\"text-primary\">pedro@ghostsofdeeptime.com</a>. I read everything. Replies might be slow, but they’re real.</p>\n                                </div>\n                            </div>\n                        </div>\n                        <div id=\"tab6\" class=\"tab-pane\" role=\"tabpanel\" mbr-if=\"bootstrapTabs > 5\">\n                            <div class=\"row\">\n                                <div class=\"col-md-12\">\n                                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                                        Free Website Builder offers a huge collection of 2500+ website blocks, templates and\n                                        themes with thousands flexible options. Combine blocks from different themes to\n                                        create a unique mix.</p>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_anchor": "tabs1-h",
+          "_cid": "uJRss8Bf0e",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "background-color": "@bgColor",
+            ".mbr-text": {
+              "color": "#000000"
+            },
+            ".mbr-section-subtitle": {
+              "color": "#000000"
+            },
+            ".mbr-section-title": {
+              "color": "#000000"
+            },
+            ".img-wrapper img": {
+              "width": "120px",
+              "height": "120px",
+              "object-fit": "cover",
+              "border-radius": "50% !important",
+              "@media (min-width: 768px) and (max-width: 991px)": {
+                "width": "120px",
+                "height": "120px"
+              },
+              "@media (max-width: 768px)": {
+                "width": "80px",
+                "height": "80px"
+              }
+            },
+            ".img-wrapper": {
+              "display": "flex"
+            },
+            ".card-text": {
+              "text-align": "center"
+            },
+            ".card-title, .img-wrapper": {
+              "text-align": "center"
+            }
+          },
+          "_name": "people07",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"people07\" group=\"People\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n        <input type=\"range\" name=\"textWidth\" title=\"Width\" min=\"4\" max=\"12\" value=\"12\" step=\"1\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Image\" name=\"showImage\" checked>\n        <select title=\"Image Align\" name=\"contentAlign\">\n          <option value=\"justify-content-start\">Left</option>\n          <option value=\"justify-content-center\" selected>Center</option>\n          <option value=\"justify-content-end\">Right</option>\n        </select>\n        <input type=\"checkbox\" title=\"Name\" name=\"showTitle\" checked>\n        <header>Background</header>\n        <input type=\"color\" title=\"Color\" name=\"bgColor\" value=\"#ffffff\">\n    </mbr-parameters>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-md-12 col-lg-{{textWidth}}\">\n                <p class=\"card-text mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".card-text\"><b>“Who writes a review of their own book?” — apparently, I do.<br>\n<br>Look, I get it. It’s a bit like clapping for yourself at the end of a solo performance. But after spending way too long whispering to imaginary prehistoric civilisations and agonising over whether “echo” or “resonance” sounded more poetic… I figured I’ve earned at least one gold star. (Okay, five.)<br>\n<br>Ghosts of Deep Time isn’t trying to prove anything. It’s weird. It’s wandering. It asks more questions than it answers.<br>And honestly? I still don’t know exactly what I wrote.\n<br><br>But if you’ve ever stared at a rock and thought, “Maybe this remembers something,” then this book might just be your jam.\n<br><br>If not, at least the cats in my house were spiritually moved by page 42. Or maybe just hungry. Hard to say.</b><br></p>\n                <div class=\"img-wrapper mt-4 {{contentAlign}}\" mbr-if=\"showImage\">\n                    <img src=\"@PROJECT_PATH@/assets/images/mbr-1.png\" alt data-slide-to=\"0\" data-bs-slide-to=\"0\">\n                </div>\n                <p class=\"card-title mbr-fonts-style mt-3\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .img-wrapper\"><b>Pedro Malha (shameless, amused, probably still editing in his head)</b><br></p>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_anchor": "people07-i",
+          "_cid": "uJRui47zEV",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = \"video\")": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            ".item-wrapper": {
+              "display": "flex",
+              "margin-bottom": "2rem",
+              "border-radius": "0 !important",
+              "@media (max-width: 767px)": {
+                "margin-bottom": "1rem"
+              }
+            },
+            ".mbr-iconfont": {
+              "font-size": "3rem",
+              "color": "@iconColor",
+              "padding-right": "2rem"
+            },
+            ".content-head": {
+              "max-width": "800px"
+            },
+            ".mbr-section-title": {
+              "color": "#ffffff"
+            }
+          },
+          "_name": "social06",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"social06\" group=\"Social\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\t<mbr-parameters>\n\t\t<header>Size</header>\n\t\t<input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n\t\t<header>Show/Hide</header>\n\t\t<input type=\"checkbox\" title=\"Title\" name=\"showmainTitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Subtitle\" name=\"showmainSubtitle\">\n\t\t<header>Cards</header>\n\t\t<input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n\t\t<input type=\"checkbox\" title=\"Icons\" name=\"showIcon\" checked>\n\t\t<input type=\"color\" title=\"Color\" name=\"iconColor\" value=\"#9fe870\" selected condition=\"showIcon\">\n\t\t<select title=\"Columns\" name=\"columns\">\n\t\t\t<option value=\"12\">1</option>\n\t\t\t<option value=\"6\">2</option>\n\t\t\t<option value=\"4\">3</option>\n\t\t\t<option value=\"3\" selected>4</option>\n\t\t</select>\n\t\t<header>Background</header>\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\" parallax>\n\t\t\t<input type=\"color\" title=\"Color\" value=\"#2e481a\" selected>\n\t\t\t<input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n\t\t</fieldset>\n\t\t<header condition=\"bg.type === 'video'\">Fallback Image</header>\n\t\t<input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n\t</mbr-parameters>\n\n\t<div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\"></div>\n\t<div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n\t\t<div class=\"row justify-content-center\">\n\t\t\t<div class=\"col-12 content-head\">\n\t\t\t\t<div class=\"mb-5\" mbr-if=\"showmainTitle || showmainSubtitle\">\n\t\t\t\t\t<h5 class=\"mbr-section-title mbr-fonts-style align-center mb-0\" mbr-theme-style=\"display-2\" mbr-if=\"showmainTitle\" data-app-selector=\".mbr-section-title\">\n\t\t\t\t\t\t<b>We're on social!</b></h5>\n\t\t\t\t\t<h6 class=\"mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4\" mbr-theme-style=\"display-7\" mbr-if=\"showmainSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n\t\t\t\t\t\tFollow us\n\t\t\t\t\t</h6>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"row\">\n\t\t\t<div class=\"item features-without-image col-12 col-md-6 col-lg-{{columns}} active\">\n\t\t\t\t<div class=\"item-wrapper\">\n\t\t\t\t\t<a href=\"https://www.instagram.com/ghostsofdeeptime/\" target=\"_blank\"><span mbr-icon class=\"mbr-iconfont m-auto socicon-instagram socicon\" mbr-if=\"showIcon\"></span></a>\n\t\t\t\t\t<div class=\"card-box\">\n\t\t\t\t\t\t<h4 class=\"card-title mbr-fonts-style mb-1\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n\t\t\t\t\t\t\t<b><a href=\"https://www.instagram.com/ghostsofdeeptime/\" class=\"text-primary\" target=\"_blank\">Instagram</a></b>\n\t\t\t\t\t\t</h4>\n\t\t\t\t\t\t<h5 class=\"card-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-text\"></h5>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<div class=\"item features-without-image col-12 col-md-6 col-lg-{{columns}}\">\n\t\t\t\t<div class=\"item-wrapper\">\n\t\t\t\t\t<a href=\"https://www.goodreads.com/author/show/55711512.Pedro_Malha\" target=\"_blank\"><span mbr-icon class=\"mbr-iconfont m-auto socicon-goodreads socicon\" mbr-if=\"showIcon\"></span></a>\n\t\t\t\t\t<div class=\"card-box\">\n\t\t\t\t\t\t<h4 class=\"card-title mbr-fonts-style mb-1\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n\t\t\t\t\t\t\t<b><a href=\"https://www.goodreads.com/author/show/55711512.Pedro_Malha\" class=\"text-primary\" target=\"_blank\">Goodreads</a></b></h4>\n\t\t\t\t\t\t<h5 class=\"card-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-text\"></h5>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"item features-without-image col-12 col-md-6 col-lg-{{columns}}\">\n\t\t\t\t<div class=\"item-wrapper\">\n\t\t\t\t\t<a href=\"https://www.youtube.com/@GhostsOfDeepTime\" target=\"_blank\"><span mbr-icon class=\"mbr-iconfont m-auto socicon-youtube socicon\" mbr-if=\"showIcon\"></span></a>\n\t\t\t\t\t<div class=\"card-box\">\n\t\t\t\t\t\t<h4 class=\"card-title mbr-fonts-style mb-1\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n\t\t\t\t\t\t\t<b><a href=\"https://www.youtube.com/@GhostsOfDeepTime\" class=\"text-primary\" target=\"_blank\">YouTube</a></b>\n\t\t\t\t\t\t</h4>\n\t\t\t\t\t\t<h5 class=\"card-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-text\"></h5>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"item features-without-image col-12 col-md-6 col-lg-{{columns}}\">\n\t\t\t\t<div class=\"item-wrapper\">\n\t\t\t\t\t<a href=\"https://x.com/GhostsDeepTime\" target=\"_blank\"><span mbr-icon class=\"mbr-iconfont m-auto socicon-twitter socicon\" mbr-if=\"showIcon\"></span></a>\n\t\t\t\t\t<div class=\"card-box\">\n\t\t\t\t\t\t<h4 class=\"card-title mbr-fonts-style mb-1\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n\t\t\t\t\t\t\t<b><a href=\"https://x.com/GhostsDeepTime\" class=\"text-primary\" target=\"_blank\">X (Twitter)</a></b></h4>\n\t\t\t\t\t\t<h5 class=\"card-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-text\"></h5>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div><div class=\"item features-without-image col-12 col-md-6 col-lg-{{columns}}\">\n\t\t\t\t<div class=\"item-wrapper\">\n\t\t\t\t\t<a href=\"https://www.tiktok.com/@ghostsofdeeptime\" target=\"_blank\"><span mbr-icon class=\"mbr-iconfont m-auto socicon-tiktok socicon\" mbr-if=\"showIcon\"></span></a>\n\t\t\t\t\t<div class=\"card-box\">\n\t\t\t\t\t\t<h4 class=\"card-title mbr-fonts-style mb-1\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n\t\t\t\t\t\t\t<b><a href=\"https://www.tiktok.com/@ghostsofdeeptime\" class=\"text-primary\" target=\"_blank\">TikTok</a></b></h4>\n\t\t\t\t\t\t<h5 class=\"card-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-text\"></h5>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div><div class=\"item features-without-image col-12 col-md-6 col-lg-{{columns}}\">\n\t\t\t\t<div class=\"item-wrapper\">\n\t\t\t\t\t<a href=\"https://medium.com/@ghostsofdeeptime\" target=\"_blank\"><span mbr-icon class=\"mbr-iconfont m-auto socicon-medium socicon\" mbr-if=\"showIcon\"></span></a>\n\t\t\t\t\t<div class=\"card-box\">\n\t\t\t\t\t\t<h4 class=\"card-title mbr-fonts-style mb-1\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n\t\t\t\t\t\t\t<b><a href=\"https://medium.com/@ghostsofdeeptime\" class=\"text-primary\" target=\"_blank\">Medium</a></b></h4>\n\t\t\t\t\t\t<h5 class=\"card-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-text\"></h5>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div><div class=\"item features-without-image col-12 col-md-6 col-lg-{{columns}}\">\n\t\t\t\t<div class=\"item-wrapper\">\n\t\t\t\t\t<a href=\"https://www.quora.com/profile/Ghosts-Of-Deep-Time\" target=\"_blank\"><span mbr-icon class=\"mbr-iconfont m-auto socicon-quora socicon\" mbr-if=\"showIcon\"></span></a>\n\t\t\t\t\t<div class=\"card-box\">\n\t\t\t\t\t\t<h4 class=\"card-title mbr-fonts-style mb-1\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n\t\t\t\t\t\t\t<b><a href=\"https://www.quora.com/profile/Ghosts-Of-Deep-Time\" class=\"text-primary\" target=\"_blank\">Quora</a></b></h4>\n\t\t\t\t\t\t<h5 class=\"card-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-text\"></h5>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div><div class=\"item features-without-image col-12 col-md-6 col-lg-{{columns}}\">\n\t\t\t\t<div class=\"item-wrapper\">\n\t\t\t\t\t<a href=\"https://pinterest.com/ghostsofdeeptime\" target=\"_blank\"><span mbr-icon class=\"mbr-iconfont m-auto socicon-pinterest socicon\" mbr-if=\"showIcon\"></span></a>\n\t\t\t\t\t<div class=\"card-box\">\n\t\t\t\t\t\t<h4 class=\"card-title mbr-fonts-style mb-1\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n\t\t\t\t\t\t\t<b><a href=\"https://pinterest.com/ghostsofdeeptime\" class=\"text-primary\" target=\"_blank\">Pinterest</a></b></h4>\n\t\t\t\t\t\t<h5 class=\"card-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-text\"></h5>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div><div class=\"item features-without-image col-12 col-md-6 col-lg-{{columns}}\">\n\t\t\t\t<div class=\"item-wrapper\">\n\t\t\t\t\t<a href=\"https://www.facebook.com/ghostsofdeeptimebook\" target=\"_blank\"><span mbr-icon class=\"mbr-iconfont m-auto socicon-facebook socicon\" mbr-if=\"showIcon\"></span></a>\n\t\t\t\t\t<div class=\"card-box\">\n\t\t\t\t\t\t<h4 class=\"card-title mbr-fonts-style mb-1\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n\t\t\t\t\t\t\t<b><a href=\"https://www.facebook.com/ghostsofdeeptimebook\" class=\"text-primary\" target=\"_blank\">Facebook</a></b></h4>\n\t\t\t\t\t\t<h5 class=\"card-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-text\"></h5>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div><div class=\"item features-without-image col-12 col-md-6 col-lg-{{columns}}\">\n\t\t\t\t<div class=\"item-wrapper\">\n\t\t\t\t\t<a href=\"https://www.tumblr.com/ghostsofdeeptime\" target=\"_blank\"><span mbr-icon class=\"mbr-iconfont m-auto socicon-tumblr socicon\" mbr-if=\"showIcon\"></span></a>\n\t\t\t\t\t<div class=\"card-box\">\n\t\t\t\t\t\t<h4 class=\"card-title mbr-fonts-style mb-1\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n\t\t\t\t\t\t\t<b><a href=\"https://www.tumblr.com/ghostsofdeeptime\" class=\"text-primary\" target=\"_blank\">Tumblr</a></b></h4>\n\t\t\t\t\t\t<h5 class=\"card-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-text\"></h5>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div><div class=\"item features-without-image col-12 col-md-6 col-lg-{{columns}}\">\n\t\t\t\t<div class=\"item-wrapper\">\n\t\t\t\t\t<a href=\"https://www.reddit.com/user/ghostsofdeeptime\" target=\"_blank\"><span mbr-icon class=\"mbr-iconfont m-auto socicon-reddit socicon\" mbr-if=\"showIcon\"></span></a>\n\t\t\t\t\t<div class=\"card-box\">\n\t\t\t\t\t\t<h4 class=\"card-title mbr-fonts-style mb-1\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n\t\t\t\t\t\t\t<b><a href=\"https://www.reddit.com/user/ghostsofdeeptime\" class=\"text-primary\" target=\"_blank\">Reddit</a></b></h4>\n\t\t\t\t\t\t<h5 class=\"card-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-text\"></h5>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div><div class=\"item features-without-image col-12 col-md-6 col-lg-{{columns}}\">\n\t\t\t\t<div class=\"item-wrapper\">\n\t\t\t\t\t<a href=\"https://www.threads.net/@ghostsofdeeptime\" target=\"_blank\"><span mbr-icon class=\"mbr-iconfont m-auto socicon-instagram socicon\" mbr-if=\"showIcon\"></span></a>\n\t\t\t\t\t<div class=\"card-box\">\n\t\t\t\t\t\t<h4 class=\"card-title mbr-fonts-style mb-1\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n\t\t\t\t\t\t\t<b><a href=\"https://www.threads.net/@ghostsofdeeptime\" class=\"text-primary\" target=\"_blank\">Threads</a></b></h4>\n\t\t\t\t\t\t<h5 class=\"card-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-text\"></h5>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
+          "_cid": "uJR9rt8Sm5",
+          "_anchor": "social06-d",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "overflow": "hidden"
+          },
+          "_name": "footer04",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"footer4\" group=\"Footers\" global once=\"footers\" mbr-class=\"{'mbr-reveal': reveal, 'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"checkbox\" title=\"Reveal effect\" name=\"reveal\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#2e481a\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#2e481a\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type !== 'color'\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div class=\"container\">\n        <div class=\"media-container-row align-center mbr-white\">\n            <div class=\"col-12\">\n                <p class=\"mbr-text mb-0 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".media-container-row .mbr-text\" data-app-placeholder=\"Type Text\">\n                    © 2025 Ghosts Of Deep Time - All Rights Reserved\n                </p>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "uJRFEoYzZi",
+          "_anchor": "footer04-m",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "footers",
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
